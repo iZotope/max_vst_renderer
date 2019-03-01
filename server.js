@@ -73,7 +73,7 @@ router.post('/query', (req, res) => {
         res.status(400).json({
             status: 400,
             error: "Schema validation error",
-            details: chemaCheck
+            details: schemaCheck
         });
         return false;
     }
