@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 433.0, 377.0, 736.0, 541.0 ],
+		"rect" : [ 596.0, 122.0, 819.0, 819.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -38,6 +38,53 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-15",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 14.0, 218.0, 70.0, 22.0 ],
+					"text" : "loadmess 0"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-14",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 56.5, 553.0, 131.0, 22.0 ],
+					"text" : "print unexpected_open"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-11",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "int" ],
+					"patching_rect" : [ 101.0, 163.0, 29.5, 22.0 ],
+					"text" : "+ 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-9",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 101.0, 194.0, 42.0, 22.0 ],
+					"text" : "gate 2"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-3",
 					"maxclass" : "meter~",
@@ -103,10 +150,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 474.0, 328.0, 35.0, 22.0 ],
-					"saved_object_attributes" : 					{
-						"attr_comment" : ""
-					}
-,
 					"text" : "out 1"
 				}
 
@@ -143,10 +186,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 46.0, 24.0, 28.0, 22.0 ],
-					"saved_object_attributes" : 					{
-						"attr_comment" : ""
-					}
-,
 					"text" : "in 1"
 				}
 
@@ -295,8 +334,8 @@
 					"numoutlets" : 8,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "signal", "signal", "", "list", "int", "", "", "" ],
-					"patching_rect" : [ 161.0, 287.0, 214.0, 22.0 ],
-					"save" : [ "#N", "vst~", "loaduniqueid", 0, 1, 1, "~/Downloads/PhoenixVerb.vst", ";" ],
+					"patching_rect" : [ 161.0, 287.0, 330.0, 22.0 ],
+					"save" : [ "#N", "vst~", "loaduniqueid", 0, 1, 1, "~/data/reverb_match/phoenix_verb/PhoenixVerb.vst", ";" ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_invisible" : 1,
@@ -324,12 +363,12 @@
 						"snapshot" : 						{
 							"pluginname" : "PhoenixVerb.vst",
 							"plugindisplayname" : "PhoenixVerb",
-							"pluginsavedname" : "~/Downloads/PhoenixVerb.vst",
+							"pluginsavedname" : "~/data/reverb_match/phoenix_verb/PhoenixVerb.vst",
 							"pluginsaveduniqueid" : 0,
 							"version" : 1,
 							"isbank" : 0,
 							"isbase64" : 1,
-							"blob" : "4591.CMlaKA....fQPMDZ....AzzPyIG...fi....A........................................DwrAbj.YNaD..P.....E..Tn8VYtkFdVUlbhA...........................3TY0QmbgwFHHEFarA....................................................................PSkQVZ00FHHEFarA........................................................................PA.rmLA....fY43Jt++A..XVNth6+e...pkiq39+G.......uPA....H..B.......B....H....PM....A....L..MUFYoUWa..............................................................................PSkQVZ00FHHEFarA.......................................................................LDagM2boMVXrA..................................................................................................................................nYNth6+e.....rmLA.....s43Jt++A..PaNth6+e...3liq39+G.............j...........FSo0N9G...fwTZsi+A...xLkV63e.....rmLA....fw43Jt++A..XbNth6+e...zliq39+G..T..6IS.....3bNth6+e...Nmiq39+G..fz43Jt++A.............I.........D063Jt++A..fD...H9R...Fmiq39+G.....6IS......dNth6+e...fmiq39+G..fy43Jt++A..F.vdxD.....nmiq39+G...543Jt++A..vdNth6+e.............PB.........fjNth6+e..v5N7VM++G...343Jt++A..E.vdxD.....5miq39+G..f943Jt++A..fdNth6+e..vA.rmLA....f.53Jt++A..HfNth6+e...Fniq39+G.............j.........P......gLvOD.....vHC7CneNth6+e.....rmLA.....E53Jt++A..PgNth6+e...Bniq39+G..j..6IS.....vgNth6+e...bniq39+G...H53Jt++A.............I.........P..........H..........Tniq39+G..T..6IS.....3hNth6+e...tniq39+G...G53Jt++A..J.vdxD.....1niq39+G..fM53Jt++A..niNth6+e.............PB.........TG3Sb8+e...LBjq39+G..fK53Jt++A..F.vdxD.....Hoiq39+G...R53Jt++A..XiNth6+e..vB.rmLA.....T53Jt++A...kNth6+e...Toiq39+G.............j..........Pfh4CA...............fjNth6+e..vA.rmLA....fX53Jt++A..HlNth6+e...Poiq39+G..v..6IS.....nlNth6+e...poiq39+G..fa53Jt++A.............I..........q93Jt++A.............hoiq39+G.....6IS.....vmNth6+e...7oiq39+G..fZ53Jt++A............P.....................ac657C...........................9Nth6+e...OuAWM++G...e53Jt++A..E.vdxD.....Vpiq39+G..fk53Jt++A..noNth6+e.............D..........nBLvO.fv.+P......ILvOD.....PHC7CA.....Lx.+.vxB7C.gQvOD......HC7CXoNth6+e..fA.rmLA.....r53Jt++A...qNth6+e...zpiq39+G.............A..........HA........fJv.+P.....b9+++C................r73Jt++A...pOth6+e...vpiq39+G..b..6IS.....nrNth6+e...Jqiq39+G..fy53Jt++A............P............nX9P................wqiq39+G...553Jt++A..Quib07+e.............fx53Jt++A..I.vdxD.....jqiq39+G...453Jt++A..ftNth6+e.............D......................fh4CA......nX9P.....PuNth6+e...7qiq39+G..LmDuUy++A..PtNth6+e..fB.rmLA....f+53Jt++A..3uNth6+e...Briq39+G.............A...............B....Ty...v+C.............P..........Ty..........pOth6+e...9qiq39+G..r..6IS.....fwNth6+e...Xriq39+G...G63Jt++A............P................................3wiq39+G..vyavUy++A...3Nth6+e..v++++++++AvAF63Jt++A..L.vdxD.....xriq39+G..fL63Jt++A..XyNth6+e.............D..........A....3+e........ac657Crr.+.PXD7CA......x.+P......gLvOD.....vHC7CHyNth6+e........................v0NthC....v.....C.....R.........nBLvOD.....m++++................fTOth6+e...37iq39+G..P....PMC...H...........fh4CA.........v++A..f1NthiE....vxB7CA.....rr.+P.......JlOD...............Ph63Jt++A...3Nthu0sqyez6HWM++G.............gTOth6+e........E....DR83Jt++A..9O..........fh4CA.....h63Jt++A..Vnva07+e...............nX9P.......JlOD.....Ltiq39+G...k63Jt++A..yIwa07+e...Pfh4CA......nX9P.....b9+++C................p63Jt++A..qlib07+e..PH0iq39+G.......f.....0L...7+..............D..........0L.........37iq39+G..DR83Jt++A...HOth6+e....28VM++G...g73Jt++A...b2a0......H0iq39+G..fJv.+......vTOth6+e..............Hv.+P.....B...ffD....m++++4JE..fCRX+P.....fvcm3s0sqyOouiq39+G...z63Jt++A..Vnva07+e...H3iq39+G....nX9P.......JlOr0sqyOTuiq39+G..7RUyUlby8hbsk1XnEVYrMmw.73OCVLGjBn93Jt++A..0L...................fA.........A..........71iq39+G..X0YuUy++A..npOth6+e..P...........393Jt++A..eb1a07+e...p5iq39+G..Ty...fbk4FYkIWYx4BbuwVdtzVX3AWXzA.QuM1V2tN+zM2Kvg1ak4VZ3YWYxIlbk4FYkIWYx8Bbn8VYtkFd1Ulbh8kbk4FYkIWYx4BbuwVdvZNth6+e....L5N..CF....itC.vfA...xn6..LX.....fq3A.......3Jd.....E..thG.......fq3A....T..3Jd.....F..thG....vA.fq3A.......3Jd.....E..thG....fA.fq3A....b..3Jd.....I..thG....fB....A....r..3Jd.....L..JGD.....zviq39+G..P6vAXy++A..PCOth6+e...A3NuV++G..fxPU+si+A..vNOth6+e...Xxiq39+G..v7tLXy++A...AJlOD.....5GfxA.CF..............B.........Dwiq39+G..PB.........1Avb.PG.9A.Xviq39+G...U73Jt++A..PEOth6+e...bwiq39+G..3lbksV.....tIWYqE....vZxEVaA....3lbksV.....qIWXsE....vZssVaA...............PGOth6+e..f7RYfM++G.............................................XKPth6+e...nBjq39+G...r.4Jt++A..A....................3s9MXy++A..fHOth6+e...I..........f73Jt++A..UCe.17+e..fssA....F..PB.........fIOth6+e...e4vfM++G..D..........fJPth6+e...nBjq39+G..PB.........FCvi+LXw..f...........p.4Jt++A............P..........H..........vfPth6+e..PIKYfM++G..bA....................LKjq39+G..f9Anb.vfA..A....H....P..........................................fBK..........JlO.......lmZFA....nvB........TXA........Jr..........bx2P.....fLOth6+e..Pi2+OEA.....18+SQ......XdpYD.....Jr..........jy2P.....PMOth6+e..Pi2+OEA.....18+SQ......XdpYD.....Jr..........jtS4++A..2YC.......PC.........H...........Nn7MD........n0N9G..7I8kw0++A..vNOth6+e..PuQTFW++G...fzrasi+A...nA.........98u0N9G..fq73Jt++A..fJPth6+e..................................fBK........PgE........uB.........DBjq39+G...E83Jt++A..TgAA17+e....F4s0N9G...fQdasi+A...Xj2V63e...Eb4s0N9G..fh.4Jt++A..pDEbV63e...vK.........d.4Jt++A..PHPth6+e..PtK.........I83Jt++A..NeTA17+e..P..........PXJTzP.....vROth6+e..PAmLQCA....7BVCiWJB...DlBEMD.....zziq39+G..TvISzP.....Di0v3kh....B0iq39+G..XL.O9yfEyAoviOth6+e..v++++++++++C..........vSOth6+e...xcjQCA.....eBK...fA..3TOth6+e...H0iq39+G..DYDYzP.....fTOth6+e...3qgB...F..fTcETsi+A..vmvB...X...72iq39+G..jHcYzP............PbALbKUA...F..fb.4Jt++A............fw....WA..............3UOth6+e...d0iq39+G..vW83Jt++A..B....3+e...G9iq39+G..fW83Jt++A..FCvi+LXwbPJxAjq39+G.............mF.........bEjq39+G..PB..........4Oth6+e..Pt0KfM++G..D....f++A..X3Oth6+e..P..........X.....PXD7CE....n.AF.....vE.....9CEtdzO...f+.....PMMMcOMyLy9feee6iEKVzOWOJ79XXXX7Sud8xOyqgR+DBBB7yxA2rOrGEt9Xtb47C...vOeu2a+7S+z8C...vO.....3tc67C.....A.fPE7eRiDvM..............PA......vK5h1OotqU8B"
+							"blob" : "4591.CMlaKA....fQPMDZ....AzzPyIG...fi....A........................................DwrAbj.YNaD..P.....E..Tn8VYtkFdVUlbhA...........................3TY0QmbgwFHHEFarA....................................................................PSkQVZ00FHHEFarA........................................................................................................................uPA....H..B.......B....H....PM....A....L..MUFYoUWa..............................................................................PSkQVZ00FHHEFarA.......................................................................LDagM2boMVXrA.............................................................................v1KU49+G...s8RUt++A............PN..........f56aCp+A...n991f5e...fvuuMn9G.......P.....HbuTk6+e...B2KU49+G...r8RUt++A..E....D.....J2KU49+G..fx8RUt++A..3buTk6+e.............jC..........4lVUD.....PtoUEA....fv8RUt++A.......D.....b2KU49+G...28RUt++A..nbuTk6+e..fA....A.....48RUt++A..PduTk6+e...n2KU49+G.............4..........b+KU49+G..DkL..f++A..vcuTk6+e..PA....A....f88RUt++A..XeuTk6+e...j2KU49+G..b....P.....3euTk6+e...92KU49+G..f.9RUt++A............PN....................fkuTk6+e...12KU49+G.......P......guTk6+e...P3KU49+G..f+8RUt++A..I....D.....X3KU49+G...F9RUt++A..vguTk6+e.............jC.........A.....Pd6JQ......d2tR.D9RUt++A..E....D.....p3KU49+G..fJ9RUt++A..fguTk6+e..fB....A....fL9RUt++A..HiuTk6+e...13KU49+G.............4...........PMoDA.........f++A..nhuTk6+e..fA....A.....Q9RUt++A..PjuTk6+e...x3KU49+G..r....P.....vjuTk6+e...L4KU49+G...T9RUt++A............PN.........fJb6JQ.......0jRD.....D4KU49+G..b....P.....3kuTk6+e...d4KU49+G...S9RUt++A..L....D.....l4KU49+G..fY9RUt++A..nluTk6+e.............jC...........0jRD.....D5KU49+G..fW9RUt++A.......D.....34KU49+G...d9RUt++A..XluTk6+e.............D....................P9.........fsBSUt++A.............T5KU49+G..DaIe7x++A..fmuTk6+e..PA....A....fj9RUt++A..HouTk6+e...V5KU49+G.............A.........v3e6D.......6+RUt++A..tzhGu7+e..v++++++++Avc....vK1...H....7u++6CR5KU49+G..X....P.....vpuTk6+e...r5KU49+G...r9RUt++A............P..........D.....PxsqDA....D................09RUNPuuqDA.....Pd6JQ......d2tR.q9RUt++A..G....D.....F6KU49+G..fw9RUt++A..nruTk6+e.............D..........4C...D..........X....v4+........D...........PMoDA.........f++A..XruTk6+e..PB....A.....39RUt++A...tuTk6+e...j6KU49+G.............A....................Du.SUt++A.......T....P7BLU49+G..3+...........0jRD.....f6KU49+G..n....P.....nuuTk6+e...56KU49+G..f+9RUt++A............P..........D34c7x++A...A0jRD......PMoDA....v4+++O................b7KU49+G..f99RUt++A..K....D.....T7KU49+G...E+RUt++A..fwuTk6+e.............D..........vpvTk6+e..P7BLU49+G...8+RUt++A..G.hGu7+e........b9+++O92NA......PwuTk6+e...C....A....fK+RUt++A..3xuTk6+e...x7KU49+G.............A.........fKs3wK++G..7+++++++e.bG....7hM...B....+6++9z++F.2A....uX...f.....t7KU49+G..7hA...B....8G..fRB...pG...nh...fh0X6JA.xsqDA....r0sqye.....A...............v1uTkCz66JQ......j2tRD.....f2sqD..........P.....A...............fD...................D....vC....PUvTk6+e..P9....A..........B....b9O........A...........TSJQ..........3+e...VisqDA....f0X6JQ.......0jRD...............Pk+RUt++A..v3uTk6+e..PDi3wK++G.......vV2tN+QUvTk6+e........E....DUASUt++A..9O..........PMoDA.....k+RUt++A..P5cGu7+e...............TSJQ.................PMoDA.....n+RUt++A..AddGu7+e...PPMoDA......TSJQ.....b9+++C................s+RUt++A..qChGu7+e..PTELU49+G.......f.....4C...7+..............D..........4C.........DMLU49+G..DUASUt++A..vHvTk6+e..vAf3wK++G...j.SUt++A..G.hGu......TELU49+G..fJb6JA.....fUvTk6+e..............Hb6JQ.....B...ffL....m++++LIC..f.bZUQ.....fvcm3s0sqyO0+KU49+G...+aZUQ.....9e..B......f+KU49+G...o2c7x++A..PgvTk6+e....PMoDA....7RUyU1V2tN+yElbx8lYl8RO.bhHbY0GKAqBSUt++A..4C...................fA.........A..........HGLU49+G...BGd7x++A..XqvTk6+e..P...........6BSUt++A..ougGu7+e...1JLU49+G..jO...fbk4FYkIWYx4BbuwFn1KU49+G...HxzW..fA...hL8E..X....ISeA..F.....vgV........bnE....PA.TlbA.......vgV.....E.PYxE....fA.LU4A....b..SUd........bnE....PA.TlbA....X..SUd.....G.vTkG....PB.LU4A....n..NaX.....K.vTkG.....C.HRGA....XG.........vNvTk6+e...v.LU49+G..HS2Lk0++A.............xkW7On9G...k.SUt++A..dKCuu7+e...F2JRG..F..............B.........9.LU49+G..jC.........1Avb.PG.9A.H.DC.f.PL..E.SUt++A...EvTk6+e...PALU49+G...V.SUt++A..tIWYqE....faxU1ZA....rlbg0V.....tIWYqE....vZxEVaA....rVaq0V...............fX.3B.1Avb.PG.89x++A.............................................1RLU49+G...pDSUt++A..A..........vRLU49+G.............kSfuu7+e...DBLU49+G..jC.........vGvTk6+e..PA+y6K++G..XYR8L..fA..4..........TBLU49+G..v1.99x++A..4..........nRLU49+G...pDSUt++A..4..........tBLU49+G..H..........fJwTk6+e........................B..........LXLU49+G..Pj+89x++A...N9gRbA..............fzFSUt++A..XbqHc..X....7...A....D...............H....P.lWeDA......................................zGJQ.....vKvTk6+e..vEr1xV++G...f40GQ.....Jr.........Jr..........zGJQ.....fLvTk6+e..Pi2uTCA.....18K0P......Xd8QD.....Jr..........TIJQ.....PMvTk6+e..Pi2uTCA.....18K0P......Xd8QD.....Jr..........Xw23++A...NvTk6+e..Pi2uTCA...............nvB..................XM3sr0++A..vNvTk6+e....98uMn9G..fBK.........n991f5e....Z........fq.SUt++A..fJwTk6+e....................................7EwOn9G..fBpQ7Cp+A..uB.........DRLU49+G...EASUt++A..gKevu7+e....jEwOn9G....YQ7Cp+A...PVD+f5e...E5EwOn9G..fhDSUt++A..pboN0f5e...vK.........dDSUt++A..PHwTk6+e..PtK.........IASUt++A..Vvrvu7+e...vDLU49+G..z9m89x++A.............................................3DLU49+G..PXF5oP.....fSvTk6+e..PAWjmBA....H3sgadJB...DlgdJD......ELU49+G..TvE4oP.....Vfa3lmh....NELU49+G..zC.mHBWV8wRfjvTk6+e..v++++++++++C..........fTvTk6+e...xM7mBA.....qvaE..fA..nUvTk6+e...TELU49+G..DY.+oP.....PUvTk6+e...XJjR...F..fTaEXCp+A..vJ7VA..X...HHLU49+G..jHY+oP.....tUvTk6+e...vKoF...F..zC.mHBWV8wRP3vTk6+e...ZELU49+G..fbDSUt++A..8.vIhvkUerDxQLU49+G.............mF.........bULU49+G..jC..........4vTk6+e..Pg996K++G..D....f++A..X3vTk6+e...B....+6++9D..........XaxNC..X..v...........qE6b..fA..A..........1lry...F..L..........vZwNG..X.....V7E.....9CEtdzO...f+.....PMMMcOMyLy9feee6iEKVzOWOJ79XXXX7Sud8xOyqgR+DBBB7yxA2rOrGEt9Xtb47C...vOeu2a+7S+z8C...vO.....3tc67C.....A.fPE7eRiDvM..............PA......vK5h1OGEfsS."
 						}
 ,
 						"snapshotlist" : 						{
@@ -346,12 +385,12 @@
 									"snapshot" : 									{
 										"pluginname" : "PhoenixVerb.vst",
 										"plugindisplayname" : "PhoenixVerb",
-										"pluginsavedname" : "~/Downloads/PhoenixVerb.vst",
+										"pluginsavedname" : "~/data/reverb_match/phoenix_verb/PhoenixVerb.vst",
 										"pluginsaveduniqueid" : 0,
 										"version" : 1,
 										"isbank" : 0,
 										"isbase64" : 1,
-										"blob" : "4591.CMlaKA....fQPMDZ....AzzPyIG...fi....A........................................DwrAbj.YNaD..P.....E..Tn8VYtkFdVUlbhA...........................3TY0QmbgwFHHEFarA....................................................................PSkQVZ00FHHEFarA........................................................................PA.rmLA....fY43Jt++A..XVNth6+e...pkiq39+G.......uPA....H..B.......B....H....PM....A....L..MUFYoUWa..............................................................................PSkQVZ00FHHEFarA.......................................................................LDagM2boMVXrA..................................................................................................................................nYNth6+e.....rmLA.....s43Jt++A..PaNth6+e...3liq39+G.............j...........FSo0N9G...fwTZsi+A...xLkV63e.....rmLA....fw43Jt++A..XbNth6+e...zliq39+G..T..6IS.....3bNth6+e...Nmiq39+G..fz43Jt++A.............I.........D063Jt++A..fD...H9R...Fmiq39+G.....6IS......dNth6+e...fmiq39+G..fy43Jt++A..F.vdxD.....nmiq39+G...543Jt++A..vdNth6+e.............PB.........fjNth6+e..v5N7VM++G...343Jt++A..E.vdxD.....5miq39+G..f943Jt++A..fdNth6+e..vA.rmLA....f.53Jt++A..HfNth6+e...Fniq39+G.............j.........P......gLvOD.....vHC7CneNth6+e.....rmLA.....E53Jt++A..PgNth6+e...Bniq39+G..j..6IS.....vgNth6+e...bniq39+G...H53Jt++A.............I.........P..........H..........Tniq39+G..T..6IS.....3hNth6+e...tniq39+G...G53Jt++A..J.vdxD.....1niq39+G..fM53Jt++A..niNth6+e.............PB.........TG3Sb8+e...LBjq39+G..fK53Jt++A..F.vdxD.....Hoiq39+G...R53Jt++A..XiNth6+e..vB.rmLA.....T53Jt++A...kNth6+e...Toiq39+G.............j..........Pfh4CA...............fjNth6+e..vA.rmLA....fX53Jt++A..HlNth6+e...Poiq39+G..v..6IS.....nlNth6+e...poiq39+G..fa53Jt++A.............I..........q93Jt++A.............hoiq39+G.....6IS.....vmNth6+e...7oiq39+G..fZ53Jt++A............P.....................ac657C...........................9Nth6+e...OuAWM++G...e53Jt++A..E.vdxD.....Vpiq39+G..fk53Jt++A..noNth6+e.............D..........nBLvO.fv.+P......ILvOD.....PHC7CA.....Lx.+.vxB7C.gQvOD......HC7CXoNth6+e..fA.rmLA.....r53Jt++A...qNth6+e...zpiq39+G.............A..........HA........fJv.+P.....b9+++C................r73Jt++A...pOth6+e...vpiq39+G..b..6IS.....nrNth6+e...Jqiq39+G..fy53Jt++A............P............nX9P................wqiq39+G...553Jt++A..Quib07+e.............fx53Jt++A..I.vdxD.....jqiq39+G...453Jt++A..ftNth6+e.............D......................fh4CA......nX9P.....PuNth6+e...7qiq39+G..LmDuUy++A..PtNth6+e..fB.rmLA....f+53Jt++A..3uNth6+e...Briq39+G.............A...............B....Ty...v+C.............P..........Ty..........pOth6+e...9qiq39+G..r..6IS.....fwNth6+e...Xriq39+G...G63Jt++A............P................................3wiq39+G..vyavUy++A...3Nth6+e..v++++++++AvAF63Jt++A..L.vdxD.....xriq39+G..fL63Jt++A..XyNth6+e.............D..........A....3+e........ac657Crr.+.PXD7CA......x.+P......gLvOD.....vHC7CHyNth6+e........................v0NthC....v.....C.....R.........nBLvOD.....m++++................fTOth6+e...37iq39+G..P....PMC...H...........fh4CA.........v++A..f1NthiE....vxB7CA.....rr.+P.......JlOD...............Ph63Jt++A...3Nthu0sqyez6HWM++G.............gTOth6+e........E....DR83Jt++A..9O..........fh4CA.....h63Jt++A..Vnva07+e...............nX9P.......JlOD.....Ltiq39+G...k63Jt++A..yIwa07+e...Pfh4CA......nX9P.....b9+++C................p63Jt++A..qlib07+e..PH0iq39+G.......f.....0L...7+..............D..........0L.........37iq39+G..DR83Jt++A...HOth6+e....28VM++G...g73Jt++A...b2a0......H0iq39+G..fJv.+......vTOth6+e..............Hv.+P.....B...ffD....m++++4JE..fCRX+P.....fvcm3s0sqyOouiq39+G...z63Jt++A..Vnva07+e...H3iq39+G....nX9P.......JlOr0sqyOTuiq39+G..7RUyUlby8hbsk1XnEVYrMmw.73OCVLGjBn93Jt++A..0L...................fA.........A..........71iq39+G..X0YuUy++A..npOth6+e..P...........393Jt++A..eb1a07+e...p5iq39+G..Ty...fbk4FYkIWYx4BbuwVdtzVX3AWXzA.QuM1V2tN+zM2Kvg1ak4VZ3YWYxIlbk4FYkIWYx8Bbn8VYtkFd1Ulbh8kbk4FYkIWYx4BbuwVdvZNth6+e....L5N..CF....itC.vfA...xn6..LX.....fq3A.......3Jd.....E..thG.......fq3A....T..3Jd.....F..thG....vA.fq3A.......3Jd.....E..thG....fA.fq3A....b..3Jd.....I..thG....fB....A....r..3Jd.....L..JGD.....zviq39+G..P6vAXy++A..PCOth6+e...A3NuV++G..fxPU+si+A..vNOth6+e...Xxiq39+G..v7tLXy++A...AJlOD.....5GfxA.CF..............B.........Dwiq39+G..PB.........1Avb.PG.9A.Xviq39+G...U73Jt++A..PEOth6+e...bwiq39+G..3lbksV.....tIWYqE....vZxEVaA....3lbksV.....qIWXsE....vZssVaA...............PGOth6+e..f7RYfM++G.............................................XKPth6+e...nBjq39+G...r.4Jt++A..A....................3s9MXy++A..fHOth6+e...I..........f73Jt++A..UCe.17+e..fssA....F..PB.........fIOth6+e...e4vfM++G..D..........fJPth6+e...nBjq39+G..PB.........FCvi+LXw..f...........p.4Jt++A............P..........H..........vfPth6+e..PIKYfM++G..bA....................LKjq39+G..f9Anb.vfA..A....H....P..........................................fBK..........JlO.......lmZFA....nvB........TXA........Jr..........bx2P.....fLOth6+e..Pi2+OEA.....18+SQ......XdpYD.....Jr..........jy2P.....PMOth6+e..Pi2+OEA.....18+SQ......XdpYD.....Jr..........jtS4++A..2YC.......PC.........H...........Nn7MD........n0N9G..7I8kw0++A..vNOth6+e..PuQTFW++G...fzrasi+A...nA.........98u0N9G..fq73Jt++A..fJPth6+e..................................fBK........PgE........uB.........DBjq39+G...E83Jt++A..TgAA17+e....F4s0N9G...fQdasi+A...Xj2V63e...Eb4s0N9G..fh.4Jt++A..pDEbV63e...vK.........d.4Jt++A..PHPth6+e..PtK.........I83Jt++A..NeTA17+e..P..........PXJTzP.....vROth6+e..PAmLQCA....7BVCiWJB...DlBEMD.....zziq39+G..TvISzP.....Di0v3kh....B0iq39+G..XL.O9yfEyAoviOth6+e..v++++++++++C..........vSOth6+e...xcjQCA.....eBK...fA..3TOth6+e...H0iq39+G..DYDYzP.....fTOth6+e...3qgB...F..fTcETsi+A..vmvB...X...72iq39+G..jHcYzP............PbALbKUA...F..fb.4Jt++A............fw....WA..............3UOth6+e...d0iq39+G..vW83Jt++A..B....3+e...G9iq39+G..fW83Jt++A..FCvi+LXwbPJxAjq39+G.............mF.........bEjq39+G..PB..........4Oth6+e..Pt0KfM++G..D....f++A..X3Oth6+e..P..........X.....PXD7CE....n.AF.....vE.....9CEtdzO...f+.....PMMMcOMyLy9feee6iEKVzOWOJ79XXXX7Sud8xOyqgR+DBBB7yxA2rOrGEt9Xtb47C...vOeu2a+7S+z8C...vO.....3tc67C.....A.fPE7eRiDvM..............PA......vK5h1OotqU8B"
+										"blob" : "4591.CMlaKA....fQPMDZ....AzzPyIG...fi....A........................................DwrAbj.YNaD..P.....E..Tn8VYtkFdVUlbhA...........................3TY0QmbgwFHHEFarA....................................................................PSkQVZ00FHHEFarA........................................................................................................................uPA....H..B.......B....H....PM....A....L..MUFYoUWa..............................................................................PSkQVZ00FHHEFarA.......................................................................LDagM2boMVXrA.............................................................................v1KU49+G...s8RUt++A............PN..........f56aCp+A...n991f5e...fvuuMn9G.......P.....HbuTk6+e...B2KU49+G...r8RUt++A..E....D.....J2KU49+G..fx8RUt++A..3buTk6+e.............jC..........4lVUD.....PtoUEA....fv8RUt++A.......D.....b2KU49+G...28RUt++A..nbuTk6+e..fA....A.....48RUt++A..PduTk6+e...n2KU49+G.............4..........b+KU49+G..DkL..f++A..vcuTk6+e..PA....A....f88RUt++A..XeuTk6+e...j2KU49+G..b....P.....3euTk6+e...92KU49+G..f.9RUt++A............PN....................fkuTk6+e...12KU49+G.......P......guTk6+e...P3KU49+G..f+8RUt++A..I....D.....X3KU49+G...F9RUt++A..vguTk6+e.............jC.........A.....Pd6JQ......d2tR.D9RUt++A..E....D.....p3KU49+G..fJ9RUt++A..fguTk6+e..fB....A....fL9RUt++A..HiuTk6+e...13KU49+G.............4...........PMoDA.........f++A..nhuTk6+e..fA....A.....Q9RUt++A..PjuTk6+e...x3KU49+G..r....P.....vjuTk6+e...L4KU49+G...T9RUt++A............PN.........fJb6JQ.......0jRD.....D4KU49+G..b....P.....3kuTk6+e...d4KU49+G...S9RUt++A..L....D.....l4KU49+G..fY9RUt++A..nluTk6+e.............jC...........0jRD.....D5KU49+G..fW9RUt++A.......D.....34KU49+G...d9RUt++A..XluTk6+e.............D....................P9.........fsBSUt++A.............T5KU49+G..DaIe7x++A..fmuTk6+e..PA....A....fj9RUt++A..HouTk6+e...V5KU49+G.............A.........v3e6D.......6+RUt++A..tzhGu7+e..v++++++++Avc....vK1...H....7u++6CR5KU49+G..X....P.....vpuTk6+e...r5KU49+G...r9RUt++A............P..........D.....PxsqDA....D................09RUNPuuqDA.....Pd6JQ......d2tR.q9RUt++A..G....D.....F6KU49+G..fw9RUt++A..nruTk6+e.............D..........4C...D..........X....v4+........D...........PMoDA.........f++A..XruTk6+e..PB....A.....39RUt++A...tuTk6+e...j6KU49+G.............A....................Du.SUt++A.......T....P7BLU49+G..3+...........0jRD.....f6KU49+G..n....P.....nuuTk6+e...56KU49+G..f+9RUt++A............P..........D34c7x++A...A0jRD......PMoDA....v4+++O................b7KU49+G..f99RUt++A..K....D.....T7KU49+G...E+RUt++A..fwuTk6+e.............D..........vpvTk6+e..P7BLU49+G...8+RUt++A..G.hGu7+e........b9+++O92NA......PwuTk6+e...C....A....fK+RUt++A..3xuTk6+e...x7KU49+G.............A.........fKs3wK++G..7+++++++e.bG....7hM...B....+6++9z++F.2A....uX...f.....t7KU49+G..7hA...B....8G..fRB...pG...nh...fh0X6JA.xsqDA....r0sqye.....A...............v1uTkCz66JQ......j2tRD.....f2sqD..........P.....A...............fD...................D....vC....PUvTk6+e..P9....A..........B....b9O........A...........TSJQ..........3+e...VisqDA....f0X6JQ.......0jRD...............Pk+RUt++A..v3uTk6+e..PDi3wK++G.......vV2tN+QUvTk6+e........E....DUASUt++A..9O..........PMoDA.....k+RUt++A..P5cGu7+e...............TSJQ.................PMoDA.....n+RUt++A..AddGu7+e...PPMoDA......TSJQ.....b9+++C................s+RUt++A..qChGu7+e..PTELU49+G.......f.....4C...7+..............D..........4C.........DMLU49+G..DUASUt++A..vHvTk6+e..vAf3wK++G...j.SUt++A..G.hGu......TELU49+G..fJb6JA.....fUvTk6+e..............Hb6JQ.....B...ffL....m++++LIC..f.bZUQ.....fvcm3s0sqyO0+KU49+G...+aZUQ.....9e..B......f+KU49+G...o2c7x++A..PgvTk6+e....PMoDA....7RUyU1V2tN+yElbx8lYl8RO.bhHbY0GKAqBSUt++A..4C...................fA.........A..........HGLU49+G...BGd7x++A..XqvTk6+e..P...........6BSUt++A..ougGu7+e...1JLU49+G..jO...fbk4FYkIWYx4BbuwFn1KU49+G...HxzW..fA...hL8E..X....ISeA..F.....vgV........bnE....PA.TlbA.......vgV.....E.PYxE....fA.LU4A....b..SUd........bnE....PA.TlbA....X..SUd.....G.vTkG....PB.LU4A....n..NaX.....K.vTkG.....C.HRGA....XG.........vNvTk6+e...v.LU49+G..HS2Lk0++A.............xkW7On9G...k.SUt++A..dKCuu7+e...F2JRG..F..............B.........9.LU49+G..jC.........1Avb.PG.9A.H.DC.f.PL..E.SUt++A...EvTk6+e...PALU49+G...V.SUt++A..tIWYqE....faxU1ZA....rlbg0V.....tIWYqE....vZxEVaA....rVaq0V...............fX.3B.1Avb.PG.89x++A.............................................1RLU49+G...pDSUt++A..A..........vRLU49+G.............kSfuu7+e...DBLU49+G..jC.........vGvTk6+e..PA+y6K++G..XYR8L..fA..4..........TBLU49+G..v1.99x++A..4..........nRLU49+G...pDSUt++A..4..........tBLU49+G..H..........fJwTk6+e........................B..........LXLU49+G..Pj+89x++A...N9gRbA..............fzFSUt++A..XbqHc..X....7...A....D...............H....P.lWeDA......................................zGJQ.....vKvTk6+e..vEr1xV++G...f40GQ.....Jr.........Jr..........zGJQ.....fLvTk6+e..Pi2uTCA.....18K0P......Xd8QD.....Jr..........TIJQ.....PMvTk6+e..Pi2uTCA.....18K0P......Xd8QD.....Jr..........Xw23++A...NvTk6+e..Pi2uTCA...............nvB..................XM3sr0++A..vNvTk6+e....98uMn9G..fBK.........n991f5e....Z........fq.SUt++A..fJwTk6+e....................................7EwOn9G..fBpQ7Cp+A..uB.........DRLU49+G...EASUt++A..gKevu7+e....jEwOn9G....YQ7Cp+A...PVD+f5e...E5EwOn9G..fhDSUt++A..pboN0f5e...vK.........dDSUt++A..PHwTk6+e..PtK.........IASUt++A..Vvrvu7+e...vDLU49+G..z9m89x++A.............................................3DLU49+G..PXF5oP.....fSvTk6+e..PAWjmBA....H3sgadJB...DlgdJD......ELU49+G..TvE4oP.....Vfa3lmh....NELU49+G..zC.mHBWV8wRfjvTk6+e..v++++++++++C..........fTvTk6+e...xM7mBA.....qvaE..fA..nUvTk6+e...TELU49+G..DY.+oP.....PUvTk6+e...XJjR...F..fTaEXCp+A..vJ7VA..X...HHLU49+G..jHY+oP.....tUvTk6+e...vKoF...F..zC.mHBWV8wRP3vTk6+e...ZELU49+G..fbDSUt++A..8.vIhvkUerDxQLU49+G.............mF.........bULU49+G..jC..........4vTk6+e..Pg996K++G..D....f++A..X3vTk6+e...B....+6++9D..........XaxNC..X..v...........qE6b..fA..A..........1lry...F..L..........vZwNG..X.....V7E.....9CEtdzO...f+.....PMMMcOMyLy9feee6iEKVzOWOJ79XXXX7Sud8xOyqgR+DBBB7yxA2rOrGEt9Xtb47C...vOeu2a+7S+z8C...vO.....3tc67C.....A.fPE7eRiDvM..............PA......vK5h1OGEfsS."
 									}
 ,
 									"fileref" : 									{
@@ -359,7 +398,7 @@
 										"filename" : "PhoenixVerb.maxsnap",
 										"filepath" : "~/Documents/Max 8/Snapshots",
 										"filepos" : -1,
-										"snapshotfileid" : "377b581279092e7ddfac1f8bb17ec0fc"
+										"snapshotfileid" : "0e08e7c4f001b1b4d7d8bf7761cfc52b"
 									}
 
 								}
@@ -368,7 +407,7 @@
 
 					}
 ,
-					"text" : "vst~ 1 1 ~/Downloads/PhoenixVerb.vst",
+					"text" : "vst~ 1 1 ~/data/reverb_match/phoenix_verb/PhoenixVerb.vst",
 					"varname" : "vst~",
 					"viewvisibility" : 0
 				}
@@ -420,8 +459,24 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-13", 0 ],
+					"destination" : [ "obj-11", 0 ],
+					"order" : 1,
 					"source" : [ "obj-10", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-13", 0 ],
+					"order" : 0,
+					"source" : [ "obj-10", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-9", 0 ],
+					"source" : [ "obj-11", 0 ]
 				}
 
 			}
@@ -465,6 +520,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-11", 0 ],
+					"source" : [ "obj-15", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-5", 0 ],
 					"source" : [ "obj-19", 0 ]
 				}
@@ -479,15 +541,15 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-19", 0 ],
-					"source" : [ "obj-21", 1 ]
+					"destination" : [ "obj-23", 0 ],
+					"source" : [ "obj-21", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-23", 0 ],
-					"source" : [ "obj-21", 0 ]
+					"destination" : [ "obj-9", 1 ],
+					"source" : [ "obj-21", 1 ]
 				}
 
 			}
@@ -599,6 +661,20 @@
 				}
 
 			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-14", 0 ],
+					"source" : [ "obj-9", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-19", 0 ],
+					"source" : [ "obj-9", 0 ]
+				}
+
+			}
  ],
 		"parameters" : 		{
 			"obj-4" : [ "vst~", "vst~", 0 ],
@@ -611,7 +687,7 @@
 		"dependency_cache" : [ 			{
 				"name" : "PhoenixVerb.maxsnap",
 				"bootpath" : "~/Documents/Max 8/Snapshots",
-				"patcherrelativepath" : "../Max 8/Snapshots",
+				"patcherrelativepath" : "../../Documents/Max 8/Snapshots",
 				"type" : "mx@s",
 				"implicit" : 1
 			}

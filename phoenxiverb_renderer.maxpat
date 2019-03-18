@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 113.0, 138.0, 1029.0, 808.0 ],
+		"rect" : [ 226.0, 99.0, 1029.0, 808.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,54 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-32",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 774.0, 105.0, 59.0, 22.0 ],
+					"text" : "route text"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-30",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 549.0, 110.0, 59.0, 22.0 ],
+					"text" : "route text"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-29",
+					"maxclass" : "button",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 763.0, 21.0, 24.0, 24.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-19",
+					"maxclass" : "button",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 520.0, 21.0, 24.0, 24.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-7",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -55,8 +103,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 807.5, 60.0, 71.0, 22.0 ],
-					"text" : "set /tmp/out"
+					"patching_rect" : [ 774.0, 0.0, 398.0, 22.0 ],
+					"text" : "set /Users/asarroff/data/reverb_match/phoenix_verb/audio/out/"
 				}
 
 			}
@@ -67,8 +115,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 608.5, 60.0, 64.0, 22.0 ],
-					"text" : "set /tmp/in"
+					"patching_rect" : [ 80.0, 21.0, 334.0, 22.0 ],
+					"text" : "set /Users/asarroff/data/reverb_match/phoenix_verb/audio/in/"
 				}
 
 			}
@@ -79,7 +127,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "bang" ],
-					"patching_rect" : [ 552.0, 39.0, 29.5, 22.0 ],
+					"patching_rect" : [ 552.0, -9.0, 29.5, 22.0 ],
 					"text" : "b 2"
 				}
 
@@ -91,7 +139,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 552.0, 11.0, 58.0, 22.0 ],
+					"patching_rect" : [ 552.0, -37.0, 58.0, 22.0 ],
 					"text" : "loadbang"
 				}
 
@@ -126,7 +174,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 792.0, 89.0, 150.0, 20.0 ],
+					"patching_rect" : [ 792.0, 41.0, 150.0, 20.0 ],
 					"text" : "output directory"
 				}
 
@@ -134,13 +182,14 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-43",
+					"linecount" : 2,
 					"maxclass" : "textedit",
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 774.0, 110.5, 211.0, 24.5 ],
-					"text" : "/tmp/out"
+					"patching_rect" : [ 785.0, 66.0, 214.0, 34.5 ],
+					"text" : "/Users/asarroff/data/reverb_match/phoenix_verb/audio/out/"
 				}
 
 			}
@@ -150,7 +199,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 567.0, 89.0, 150.0, 20.0 ],
+					"patching_rect" : [ 567.0, 41.0, 150.0, 20.0 ],
 					"text" : "input directory"
 				}
 
@@ -158,13 +207,14 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-39",
+					"linecount" : 2,
 					"maxclass" : "textedit",
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 549.0, 110.5, 211.0, 24.5 ],
-					"text" : "/tmp/in"
+					"patching_rect" : [ 552.0, 69.5, 211.0, 34.5 ],
+					"text" : "/Users/asarroff/data/reverb_match/phoenix_verb/audio/in/"
 				}
 
 			}
@@ -348,7 +398,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-45",
-					"items" : [ 44100, ",", 48000, ",", 96000 ],
+					"items" : [ 44100, ",", 48000, ",", 88200, ",", 96000 ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -578,8 +628,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 299.0, 282.0, 200.0, 22.0 ],
-					"text" : "poly~ phoenixverb_renderer.poly 16"
+					"patching_rect" : [ 299.0, 282.0, 264.0, 22.0 ],
+					"text" : "poly~ phoenixverb_renderer.poly 16 @parallel 1"
 				}
 
 			}
@@ -675,6 +725,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-18", 0 ],
 					"source" : [ "obj-17", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-39", 0 ],
+					"source" : [ "obj-19", 0 ]
 				}
 
 			}
@@ -799,6 +856,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-43", 0 ],
+					"source" : [ "obj-29", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-8", 0 ],
 					"source" : [ "obj-3", 0 ]
 				}
@@ -806,8 +870,22 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-44", 0 ],
+					"source" : [ "obj-30", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-33", 0 ],
 					"source" : [ "obj-31", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-46", 0 ],
+					"source" : [ "obj-32", 0 ]
 				}
 
 			}
@@ -835,7 +913,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-44", 0 ],
+					"destination" : [ "obj-30", 0 ],
 					"source" : [ "obj-39", 0 ]
 				}
 
@@ -849,7 +927,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-46", 0 ],
+					"destination" : [ "obj-32", 0 ],
 					"source" : [ "obj-43", 0 ]
 				}
 
@@ -966,22 +1044,22 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-2.7::obj-4" : [ "vst~[6]", "vst~", 0 ],
-			"obj-2.8::obj-4" : [ "vst~[7]", "vst~", 0 ],
-			"obj-2.11::obj-4" : [ "vst~[10]", "vst~", 0 ],
-			"obj-2.2::obj-4" : [ "vst~[1]", "vst~", 0 ],
+			"obj-2.5::obj-4" : [ "vst~[4]", "vst~", 0 ],
+			"obj-2.10::obj-4" : [ "vst~[9]", "vst~", 0 ],
+			"obj-2.15::obj-4" : [ "vst~[14]", "vst~", 0 ],
 			"obj-2.4::obj-4" : [ "vst~[3]", "vst~", 0 ],
 			"obj-2.9::obj-4" : [ "vst~[8]", "vst~", 0 ],
 			"obj-2.14::obj-4" : [ "vst~[13]", "vst~", 0 ],
-			"obj-2.13::obj-4" : [ "vst~[12]", "vst~", 0 ],
-			"obj-2.6::obj-4" : [ "vst~[5]", "vst~", 0 ],
-			"obj-2.1::obj-4" : [ "vst~", "vst~", 0 ],
-			"obj-2.10::obj-4" : [ "vst~[9]", "vst~", 0 ],
-			"obj-2.15::obj-4" : [ "vst~[14]", "vst~", 0 ],
-			"obj-2.16::obj-4" : [ "vst~[15]", "vst~", 0 ],
-			"obj-2.12::obj-4" : [ "vst~[11]", "vst~", 0 ],
 			"obj-2.3::obj-4" : [ "vst~[2]", "vst~", 0 ],
-			"obj-2.5::obj-4" : [ "vst~[4]", "vst~", 0 ],
+			"obj-2.8::obj-4" : [ "vst~[7]", "vst~", 0 ],
+			"obj-2.13::obj-4" : [ "vst~[12]", "vst~", 0 ],
+			"obj-2.2::obj-4" : [ "vst~[1]", "vst~", 0 ],
+			"obj-2.7::obj-4" : [ "vst~[6]", "vst~", 0 ],
+			"obj-2.12::obj-4" : [ "vst~[11]", "vst~", 0 ],
+			"obj-2.1::obj-4" : [ "vst~", "vst~", 0 ],
+			"obj-2.6::obj-4" : [ "vst~[5]", "vst~", 0 ],
+			"obj-2.11::obj-4" : [ "vst~[10]", "vst~", 0 ],
+			"obj-2.16::obj-4" : [ "vst~[15]", "vst~", 0 ],
 			"parameterbanks" : 			{
 
 			}
@@ -990,14 +1068,14 @@
 ,
 		"dependency_cache" : [ 			{
 				"name" : "server.js",
-				"bootpath" : "~/Documents/phoenixverbrenderer",
+				"bootpath" : "~/repos/phoenixverbrenderer",
 				"patcherrelativepath" : ".",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "phoenixverb_renderer.poly.maxpat",
-				"bootpath" : "~/Documents/phoenixverbrenderer",
+				"bootpath" : "~/repos/phoenixverbrenderer",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
@@ -1005,7 +1083,7 @@
 , 			{
 				"name" : "PhoenixVerb.maxsnap",
 				"bootpath" : "~/Documents/Max 8/Snapshots",
-				"patcherrelativepath" : "../Max 8/Snapshots",
+				"patcherrelativepath" : "../../Documents/Max 8/Snapshots",
 				"type" : "mx@s",
 				"implicit" : 1
 			}

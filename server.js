@@ -93,12 +93,12 @@ const doWork = (index) => {
         maxApi.outlet("param", k, params[k]);
     }
     const fileName = soundFiles[workQueue[0].fileIndex];
-    const runOutDir = "${outputDir}${run_id}/";
+    const runOutDir = `${outputDir}${workQueue[0].run_id}/`;
     if (!fs.existsSync(runOutDir)) {
         fs.mkdirSync(runOutDir);
     }
     maxApi.outlet("read", inputDir + fileName);
-    maxApi.outlet("write", runOutDir + crypto.createHash('md5').update(fileName).digest("hex"));
+    maxApi.outlet("write", runOutDir + crypto.createHash('md5').update(fileName).digest("hex") + ".wav");
     maxApi.post(`Rendering file ${++workQueue[0].fileIndex} of ${soundFiles.length} (job 1 of ${workQueue.length})`);
 };
 
@@ -107,7 +107,7 @@ const tryWork = () => {
         return availableInstances.findIndex((value) => { return value; });
     };
     let index = findAvailableInstance();
-    
+
     while (index >= 0) {
         doWork(index);
         index = findAvailableInstance();
@@ -131,7 +131,7 @@ const maxHandlers = {
     },
     indir: (dir) => {
         if (!fs.existsSync(inputDir)) {
-            maxApi.post(`Input directory '${inputDir}' not found.`, ERROR);
+            maxApi.post(`Input directory '${inputDir}' not found.`, maxApi.ERROR);
         }
         inputDir = dir;
     },
