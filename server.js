@@ -34,12 +34,29 @@ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 */
+const fs = require('fs');
+const maxApi = require("max-api");
 const express = require('express');
 const bodyParser = require('body-parser');
 const validate = require('jsonschema').validate;
+var crypto = require('crypto');
 
-const app = express()
+const app = express();
 const port = process.env.PORT || 8080;
+
+const instanceCount = 16;
+
+var inputDir = "/tmp/in/";
+var outputDir = "/tmp/out/";
+
+var availableInstances = [];
+for (var i = 1; i <= instanceCount; ++i) {
+    availableInstances[i] = true;
+}
+
+var soundFiles = [];
+
+var workQueue = [];
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
@@ -57,17 +74,88 @@ router.get('/', (req, res) => {
 const querySchema = {
     type: "object",
     properties: {
-        id: {type: "string"},
-        property: {type: "object"}
+        run_id: {type: "string"},
+        params: {type: "object"}
     },
-    required: ["id", "property"]
+    required: ["run_id", "params"]
 };
+
+const doWork = (index) => {
+    while (workQueue.length != 0 && workQueue[workQueue.length-1].fileIndex >= soundFiles.length) {
+        workQueue.shift();
+    }
+    if (workQueue.length == 0) {
+        return;
+    }
+    availableInstances[index] = false;
+    maxApi.outlet("target", index);
+    for (var k in workQueue[0].params) {
+        maxApi.outlet("param", k, params[k]);
+    }
+    const fileName = soundFiles[workQueue[0].fileIndex];
+    const runOutDir = "${outputDir}${run_id}/";
+    if (!fs.existsSync(runOutDir)) {
+        fs.mkdirSync(runOutDir);
+    }
+    maxApi.outlet("read", inputDir + fileName);
+    maxApi.outlet("write", runOutDir + crypto.createHash('md5').update(fileName).digest("hex"));
+    maxApi.post(`Rendering file ${++workQueue[0].fileIndex} of ${soundFiles.length} (job 1 of ${workQueue.length})`);
+};
+
+const tryWork = () => {
+    const findAvailableInstance = () => {
+        return availableInstances.findIndex((value) => { return value; });
+    };
+    let index = findAvailableInstance();
+    
+    while (index >= 0) {
+        doWork(index);
+        index = findAvailableInstance();
+    }
+};
+
+const maxHandlers = {
+    filelist: (file) => {
+        soundFiles = [];
+        const lineReader = require('readline').createInterface({
+            input: fs.createReadStream(file)
+        });
+        lineReader.on('line', function (line) {
+            maxApi.post(line);
+            soundFiles.push(line);
+        });
+        lineReader.on('close', function () {
+            maxApi.post(soundFiles.toString());
+            maxApi.post(`${soundFiles.length} files ready for processing.`);
+        });
+    },
+    indir: (dir) => {
+        if (!fs.existsSync(inputDir)) {
+            maxApi.post(`Input directory '${inputDir}' not found.`, ERROR);
+        }
+        inputDir = dir;
+    },
+    outdir: (dir) => {
+        if (!fs.existsSync(outputDir)) {
+            fs.mkdirSync(outputDir);
+        }
+        outputDir = dir;
+    },
+    [maxApi.MESSAGE_TYPES.NUMBER]: (instance) => {
+        availableInstances[instance] = true;
+        tryWork();
+    }
+};
+
+maxApi.addHandlers(maxHandlers);
 
 const queryHandler = (query) => {
-    console.log("Received ", query, " and maybe could have done something with it.");
+    query['fileIndex'] = 0;
+    workQueue.push(query);
+    tryWork();
 };
 
-router.post('/query', (req, res) => {
+router.post('/submit', (req, res) => {
     const schemaCheck = validate(req.body, querySchema);
     if (!schemaCheck.valid) {
         res.status(400).json({
@@ -78,7 +166,9 @@ router.post('/query', (req, res) => {
         return false;
     }
     queryHandler(req.body);
-    res.json(req.body);
+    res.json({message: 'Run submitted!'});
+    maxApi.post("ping");
+    return true;
 });
 
 
