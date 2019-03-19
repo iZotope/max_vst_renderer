@@ -47,6 +47,7 @@ const port = process.env.PVR_PORT || 8080;
 const instanceCount = 16;
 
 const ResponseCode = {
+    // submit response codes
     ValidJob: 202,
     MissingSoundFiles: 204,
     UnknownParam: 206,
@@ -55,7 +56,7 @@ const ResponseCode = {
     InvalidSchema: 400,
     BadInputDir: 461,
     BadOutputDir: 462,
-    
+    // status response codes
     RunningJobs: 200,
     NoJobs: 204
 };
