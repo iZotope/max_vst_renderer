@@ -214,14 +214,32 @@ const submitJob = (query) => {
 const validateParams = (query) => {
     let unknownParams = [];
     for (const k in query['params']) {
-        // TODO line below is bogus
-        if (!jobSchema['properties']['params']['properties'].allKeys().contains(k)) {
-            return {
-                status: ResponseCode.UnknownParam,
-                message: "Unknown Param(s)",
-                details: unknownParams
-            };
+        const value = query['params'][k];
+        if (!jobSchema.properties.params.properties.hasOwnProperty(k)) {
+            unknownParams.push({
+                param: k,
+                value: query['params'][k],
+                error: "Unknown"
+            });
+            delete query['params'][k];
+        } else {
+            if (value < 0.0 || value > 1.0) {
+                unknownParams.push({
+                    param: k,
+                    value: query['params'][k],
+                    error: "Out of range"
+                });
+            }
+            delete query['params'][k];
         }
+
+    }
+    if (unknownParams.length > 0) {
+        return {
+            status: ResponseCode.UnknownParam,
+            message: "Unknown or invalid range param(s)",
+            details: unknownParams
+        };
     }
     return {valid: true};
 };
