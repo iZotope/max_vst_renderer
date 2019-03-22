@@ -94,9 +94,9 @@ const jobSchema = {
             }
         },
         input_files: {oneOf: [
-                      {type: "array"},
-                      {type: "string"}
-                     ]},
+            {type: "array"},
+            {type: "string"}
+        ]},
         input_dir: {type: "string"},
         output_dir: {type: "string"}
     },
@@ -120,7 +120,7 @@ const readSoundFileList = (file, onClose) => {
     let soundFiles = [];
     const lineReader = require('readline').createInterface({
         input: fs.createReadStream(file)
-        });
+    });
     lineReader.on('line', (line) => {
         maxApi.post(line);
         soundFiles.push(line);
@@ -157,11 +157,12 @@ const doWork = (index) => {
     }
 
     maxApi.outlet("target", index);
+    maxApi.outlet("read", filePath);
+    maxApi.outlet("write", `${runOutDir}/${crypto.createHash('md5').update(fileName).digest("hex")}.wav`);
     for (var k in workItem.params) {
         maxApi.outlet("param", k, workItem.params[k]);
     }
-    maxApi.outlet("read", filePath);
-    maxApi.outlet("write", `${runOutDir}/${crypto.createHash('md5').update(fileName).digest("hex")}.wav`);
+    maxApi.outlet("render");
     maxApi.post(`Rendering file ${++workItem.fileIndex} of ${soundFiles.length} (job 1 of ${workQueue.length})`);
 };
 
@@ -180,7 +181,7 @@ const tryWork = () => {
 
 const maxHandlers = {
     filelist: (file) => {
-      readSoundFileList(file, (soundFiles) => {
+        readSoundFileList(file, (soundFiles) => {
             defaultSoundFiles = soundFiles;
             maxApi.post(defaultSoundFiles.toString());
             maxApi.post(`${defaultSoundFiles.length} files ready in default sound file list.`);
@@ -216,22 +217,22 @@ const validateParams = (query) => {
     let unknownParams = [];
     for (const k in query['params']) {
         const value = query['params'][k];
+        maxApi.post(`key: ${k}, value: ${value}`);
         if (!jobSchema.properties.params.properties.hasOwnProperty(k)) {
+            maxApi.post("unknown!!!");
             unknownParams.push({
                 param: k,
                 value: query['params'][k],
                 error: "Unknown"
             });
             delete query['params'][k];
-        } else {
-            if (value < 0.0 || value > 1.0) {
-                unknownParams.push({
-                    param: k,
-                    value: query['params'][k],
-                    error: "Out of range"
-                });
-            }
-            delete query['params'][k];
+        } else if (value < 0.0 || value > 1.0) {
+            unknownParams.push({
+                param: k,
+                value: query['params'][k],
+                error: "Out of range"
+            });
+            delete query['params'][k];            
         }
 
     }

@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 113.0, 138.0, 1029.0, 808.0 ],
+		"rect" : [ 221.0, 113.0, 1029.0, 808.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,23 +39,24 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-51",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 212.0, 239.0, 45.0, 22.0 ],
+					"text" : "open 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-40",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 299.0, 326.0, 81.0, 22.0 ],
 					"text" : "print poly_out"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-7",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 386.0, 258.0, 73.0, 22.0 ],
-					"text" : "print poly_in"
 				}
 
 			}
@@ -331,7 +332,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-31",
-					"items" : [ 32, ",", 64, ",", 128, ",", 256, ",", 512, ",", 1024, ",", 2048 ],
+					"items" : [ 1, ",", 2, ",", 4, ",", 8, ",", 16, ",", 32, ",", 64, ",", 128, ",", 256, ",", 512, ",", 1024, ",", 2048, ",", 4096 ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -350,8 +351,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "int" ],
-					"patching_rect" : [ 452.0, 741.840087890625, 87.0, 23.0 ],
-					"text" : "adstatus iovs"
+					"patching_rect" : [ 452.0, 741.840087890625, 91.0, 23.0 ],
+					"text" : "adstatus sigvs"
 				}
 
 			}
@@ -428,7 +429,7 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "int", "int", "bang", "int", "bang" ],
 					"patching_rect" : [ 161.0, 427.0, 89.0, 22.0 ],
-					"text" : "t 1 48000 b 1 b"
+					"text" : "t 1 44100 b 1 b"
 				}
 
 			}
@@ -628,8 +629,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 299.0, 282.0, 163.0, 22.0 ],
-					"text" : "poly~ pvr.poly 16 @parallel 1"
+					"patching_rect" : [ 299.0, 282.0, 99.0, 22.0 ],
+					"text" : "poly~ pvr.poly 16"
 				}
 
 			}
@@ -729,7 +730,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
-					"midpoints" : [ 308.5, 318.0, 278.0, 318.0, 278.0, 192.0, 308.5, 192.0 ],
+					"midpoints" : [ 308.5, 314.0, 281.5, 314.0, 281.5, 187.0, 308.5, 187.0 ],
 					"order" : 1,
 					"source" : [ "obj-2", 0 ]
 				}
@@ -871,7 +872,6 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-2", 0 ],
-					"order" : 1,
 					"source" : [ "obj-30", 2 ]
 				}
 
@@ -887,14 +887,6 @@
 				"patchline" : 				{
 					"destination" : [ "obj-38", 0 ],
 					"source" : [ "obj-30", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-7", 0 ],
-					"order" : 0,
-					"source" : [ "obj-30", 2 ]
 				}
 
 			}
@@ -1030,6 +1022,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"source" : [ "obj-51", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
 					"source" : [ "obj-6", 0 ]
 				}
@@ -1037,22 +1036,22 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-2.2::obj-4" : [ "vst~[1]", "vst~", 0 ],
-			"obj-2.7::obj-4" : [ "vst~[6]", "vst~", 0 ],
-			"obj-2.12::obj-4" : [ "vst~[11]", "vst~", 0 ],
-			"obj-2.5::obj-4" : [ "vst~[4]", "vst~", 0 ],
-			"obj-2.10::obj-4" : [ "vst~[9]", "vst~", 0 ],
-			"obj-2.15::obj-4" : [ "vst~[14]", "vst~", 0 ],
-			"obj-2.3::obj-4" : [ "vst~[2]", "vst~", 0 ],
-			"obj-2.8::obj-4" : [ "vst~[7]", "vst~", 0 ],
-			"obj-2.13::obj-4" : [ "vst~[12]", "vst~", 0 ],
-			"obj-2.6::obj-4" : [ "vst~[5]", "vst~", 0 ],
-			"obj-2.11::obj-4" : [ "vst~[10]", "vst~", 0 ],
-			"obj-2.16::obj-4" : [ "vst~[15]", "vst~", 0 ],
-			"obj-2.1::obj-4" : [ "vst~", "vst~", 0 ],
-			"obj-2.4::obj-4" : [ "vst~[3]", "vst~", 0 ],
-			"obj-2.9::obj-4" : [ "vst~[8]", "vst~", 0 ],
-			"obj-2.14::obj-4" : [ "vst~[13]", "vst~", 0 ],
+			"obj-2.16::obj-76" : [ "vst~[15]", "vst~", 0 ],
+			"obj-2.7::obj-76" : [ "vst~[6]", "vst~", 0 ],
+			"obj-2.8::obj-76" : [ "vst~[7]", "vst~", 0 ],
+			"obj-2.11::obj-76" : [ "vst~[10]", "vst~", 0 ],
+			"obj-2.3::obj-76" : [ "vst~[2]", "vst~", 0 ],
+			"obj-2.4::obj-76" : [ "vst~[3]", "vst~", 0 ],
+			"obj-2.9::obj-76" : [ "vst~[8]", "vst~", 0 ],
+			"obj-2.13::obj-76" : [ "vst~[12]", "vst~", 0 ],
+			"obj-2.6::obj-76" : [ "vst~[5]", "vst~", 0 ],
+			"obj-2.10::obj-76" : [ "vst~[9]", "vst~", 0 ],
+			"obj-2.14::obj-76" : [ "vst~[13]", "vst~", 0 ],
+			"obj-2.2::obj-76" : [ "vst~[1]", "vst~", 0 ],
+			"obj-2.12::obj-76" : [ "vst~[11]", "vst~", 0 ],
+			"obj-2.15::obj-76" : [ "vst~[14]", "vst~", 0 ],
+			"obj-2.1::obj-76" : [ "vst~[16]", "vst~", 0 ],
+			"obj-2.5::obj-76" : [ "vst~[4]", "vst~", 0 ],
 			"parameterbanks" : 			{
 
 			}
