@@ -44,7 +44,7 @@ const crypto = require('crypto');
 
 const port = process.env.PVR_PORT || 8080;
 
-const instanceCount = 16;
+const instanceCount = 36;
 
 const ResponseCode = {
     // submit response codes

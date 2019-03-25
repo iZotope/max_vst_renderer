@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 0,
-			"revision" : 3,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -399,7 +399,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-45",
-					"items" : [ 44100, ",", 48000 ],
+					"items" : [ 44100, ",", 48000, ",", 96000 ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -591,8 +591,9 @@
 					"maxclass" : "bpatcher",
 					"name" : "n4m.monitor.maxpat",
 					"numinlets" : 1,
-					"numoutlets" : 0,
+					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
+					"outlettype" : [ "bang" ],
 					"patching_rect" : [ 502.5, 235.0, 400.0, 220.0 ],
 					"viewvisibility" : 1
 				}
@@ -630,7 +631,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 299.0, 282.0, 99.0, 22.0 ],
-					"text" : "poly~ pvr.poly 16"
+					"text" : "poly~ pvr.poly 36"
 				}
 
 			}
@@ -645,8 +646,8 @@
 					"saved_object_attributes" : 					{
 						"autostart" : 0,
 						"defer" : 0,
-						"node" : "",
-						"npm" : "",
+						"node_bin_path" : "",
+						"npm_bin_path" : "",
 						"watch" : 1
 					}
 ,
@@ -1036,22 +1037,42 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-2.16::obj-76" : [ "vst~[15]", "vst~", 0 ],
-			"obj-2.7::obj-76" : [ "vst~[6]", "vst~", 0 ],
-			"obj-2.8::obj-76" : [ "vst~[7]", "vst~", 0 ],
-			"obj-2.11::obj-76" : [ "vst~[10]", "vst~", 0 ],
-			"obj-2.3::obj-76" : [ "vst~[2]", "vst~", 0 ],
-			"obj-2.4::obj-76" : [ "vst~[3]", "vst~", 0 ],
-			"obj-2.9::obj-76" : [ "vst~[8]", "vst~", 0 ],
-			"obj-2.13::obj-76" : [ "vst~[12]", "vst~", 0 ],
-			"obj-2.6::obj-76" : [ "vst~[5]", "vst~", 0 ],
-			"obj-2.10::obj-76" : [ "vst~[9]", "vst~", 0 ],
-			"obj-2.14::obj-76" : [ "vst~[13]", "vst~", 0 ],
-			"obj-2.2::obj-76" : [ "vst~[1]", "vst~", 0 ],
-			"obj-2.12::obj-76" : [ "vst~[11]", "vst~", 0 ],
-			"obj-2.15::obj-76" : [ "vst~[14]", "vst~", 0 ],
-			"obj-2.1::obj-76" : [ "vst~[16]", "vst~", 0 ],
-			"obj-2.5::obj-76" : [ "vst~[4]", "vst~", 0 ],
+			"obj-2.27::obj-76" : [ "vst~[35]", "vst~", 0 ],
+			"obj-2.9::obj-76" : [ "vst~[11]", "vst~", 0 ],
+			"obj-2.32::obj-76" : [ "vst~[40]", "vst~", 0 ],
+			"obj-2.4::obj-76" : [ "vst~[16]", "vst~", 0 ],
+			"obj-2.7::obj-76" : [ "vst~[18]", "vst~", 0 ],
+			"obj-2.14::obj-76" : [ "vst~[23]", "vst~", 0 ],
+			"obj-2.20::obj-76" : [ "vst~[28]", "vst~", 0 ],
+			"obj-2.25::obj-76" : [ "vst~[33]", "vst~", 0 ],
+			"obj-2.30::obj-76" : [ "vst~[38]", "vst~", 0 ],
+			"obj-2.15::obj-76" : [ "vst~[13]", "vst~", 0 ],
+			"obj-2.35::obj-76" : [ "vst~[43]", "vst~", 0 ],
+			"obj-2.11::obj-76" : [ "vst~[21]", "vst~", 0 ],
+			"obj-2.18::obj-76" : [ "vst~[26]", "vst~", 0 ],
+			"obj-2.23::obj-76" : [ "vst~[31]", "vst~", 0 ],
+			"obj-2.28::obj-76" : [ "vst~[36]", "vst~", 0 ],
+			"obj-2.6::obj-76" : [ "vst~[10]", "vst~", 0 ],
+			"obj-2.33::obj-76" : [ "vst~[41]", "vst~", 0 ],
+			"obj-2.8::obj-76" : [ "vst~[19]", "vst~", 0 ],
+			"obj-2.16::obj-76" : [ "vst~[24]", "vst~", 0 ],
+			"obj-2.21::obj-76" : [ "vst~[29]", "vst~", 0 ],
+			"obj-2.26::obj-76" : [ "vst~[34]", "vst~", 0 ],
+			"obj-2.2::obj-76" : [ "vst~[9]", "vst~", 0 ],
+			"obj-2.31::obj-76" : [ "vst~[39]", "vst~", 0 ],
+			"obj-2.3::obj-76" : [ "vst~[14]", "vst~", 0 ],
+			"obj-2.36::obj-76" : [ "vst~[44]", "vst~", 0 ],
+			"obj-2.5::obj-76" : [ "vst~[17]", "vst~", 0 ],
+			"obj-2.13::obj-76" : [ "vst~[22]", "vst~", 0 ],
+			"obj-2.1::obj-76" : [ "vst~[15]", "vst~", 0 ],
+			"obj-2.19::obj-76" : [ "vst~[27]", "vst~", 0 ],
+			"obj-2.24::obj-76" : [ "vst~[32]", "vst~", 0 ],
+			"obj-2.29::obj-76" : [ "vst~[37]", "vst~", 0 ],
+			"obj-2.12::obj-76" : [ "vst~[12]", "vst~", 0 ],
+			"obj-2.34::obj-76" : [ "vst~[42]", "vst~", 0 ],
+			"obj-2.10::obj-76" : [ "vst~[20]", "vst~", 0 ],
+			"obj-2.17::obj-76" : [ "vst~[25]", "vst~", 0 ],
+			"obj-2.22::obj-76" : [ "vst~[30]", "vst~", 0 ],
 			"parameterbanks" : 			{
 
 			}
