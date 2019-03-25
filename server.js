@@ -61,6 +61,32 @@ const ResponseCode = {
     NoJobs: 204
 };
 
+const paramNameMappings = {
+    Mix: "Mix",
+    Diffusion: "Diffusion",
+    Diffuser_Type: "Reverb Type",
+    Diffuser_Size: "Diffuser Size",
+    Predelay: "Predelay",
+    Early_Attack: "Early Attack",
+    Early_Time: "Early Time",
+    Early_Slope: "Early Slope",
+    Envelope_Attack: "Envelope Attack",
+    Envelope_Time: "Envelope Time",
+    Envelope_Slope: "Envelope Slope",
+    Reverb_Size: "Reverb Size",
+    Reverb_Time: "Reverb Time",
+    Xover_Frequency: "Xover Frequency",
+    Low_Mid_Balance: "Low-Mid Balance",
+    Damp_Frequency: "Damp Frequency",
+    Damping_Factor: "Damping Factor",
+    Early_Level: "Early Level",
+    Reverb_Level: "Reverb Level",
+    Width: "Width",
+    Output_Filter_Type: "Output Filter T",
+    Out_Frequency: "Out Frequency",
+    Zoom: "Zoom"
+};
+
 const jobSchema = {
     type: "object",
     properties: {
@@ -68,29 +94,29 @@ const jobSchema = {
         params: {
             type: "object",
             properties: {
-                "Mix": {type: "number"},
-                "Diffusion": {type: "number"},
-                "Reverb Type": {type: "number"},
-                "Diffuser Size": {type: "number"},
-                "Predelay": {type: "number"},
-                "Early Attack": {type: "number"},
-                "Early Time": {type: "number"},
-                "Early Slope": {type: "number"},
-                "Envelope Attack": {type: "number"},
-                "Envelope Time": {type: "number"},
-                "Envelope Slope": {type: "number"},
-                "Reverb Size": {type: "number"},
-                "Reverb Time": {type: "number"},
-                "Xover Frequency": {type: "number"},
-                "Low-Mid Balance": {type: "number"},
-                "Damp Frequency": {type: "number"},
-                "Damping Factor": {type: "number"},
-                "Early Level": {type: "number"},
-                "Reverb Level": {type: "number"},
-                "Width": {type: "number"},
-                "Output Filter T": {type: "number"},
-                "Out Frequency": {type: "number"},
-                "Zoom": {type: "number"}
+                Mix: {type: "number"},
+                Diffusion: {type: "number"},
+                Diffuser_Type: {type: "number"},
+                Diffuser_Size: {type: "number"},
+                Predelay: {type: "number"},
+                Early_Attack: {type: "number"},
+                Early_Time: {type: "number"},
+                Early_Slope: {type: "number"},
+                Envelope_Attack: {type: "number"},
+                Envelope_Time: {type: "number"},
+                Envelope_Slope: {type: "number"},
+                Reverb_Size: {type: "number"},
+                Reverb_Time: {type: "number"},
+                Xover_Frequency: {type: "number"},
+                Low_Mid_Balance: {type: "number"},
+                Damp_Frequency: {type: "number"},
+                Damping_Factor: {type: "number"},
+                Early_Level: {type: "number"},
+                Reverb_Level: {type: "number"},
+                Width: {type: "number"},
+                Output_Filter_Type: {type: "number"},
+                Out_Frequency: {type: "number"},
+                Zoom:{type: "number"}
             }
         },
         input_files: {oneOf: [
@@ -151,6 +177,10 @@ const doWork = (index) => {
 
     if (!fs.existsSync(filePath)) {
         maxApi.post(`Input file not found: ${filePath}`, maxApi.ERROR);
+        ++workItem.fileIndex;
+        availableInstances[index] = true;
+        doWork(index);
+        return;
     }
     if (!fs.existsSync(runOutDir)) {
         fs.mkdirSync(runOutDir);
@@ -160,7 +190,7 @@ const doWork = (index) => {
     maxApi.outlet("read", filePath);
     maxApi.outlet("write", `${runOutDir}/${crypto.createHash('md5').update(fileName).digest("hex")}.wav`);
     for (var k in workItem.params) {
-        maxApi.outlet("param", k, workItem.params[k]);
+        maxApi.outlet("param", paramNameMappings[k], workItem.params[k]);
     }
     maxApi.outlet("render");
     maxApi.post(`Rendering file ${++workItem.fileIndex} of ${soundFiles.length} (job 1 of ${workQueue.length})`);
