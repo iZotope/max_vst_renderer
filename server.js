@@ -148,7 +148,6 @@ const readSoundFileList = (file, onClose) => {
         input: fs.createReadStream(file)
     });
     lineReader.on('line', (line) => {
-        maxApi.post(line);
         soundFiles.push(line);
     });
     lineReader.on('close', () => {
@@ -203,7 +202,6 @@ const tryWork = () => {
     let index = findAvailableInstance();
 
     while (index >= 0 && workQueue.length > 0) {
-        maxApi.post(`Found index: ${index}`);
         doWork(index);
         index = findAvailableInstance();
     }
@@ -213,7 +211,6 @@ const maxHandlers = {
     filelist: (file) => {
         readSoundFileList(file, (soundFiles) => {
             defaultSoundFiles = soundFiles;
-            maxApi.post(defaultSoundFiles.toString());
             maxApi.post(`${defaultSoundFiles.length} files ready in default sound file list.`);
         });
     },
@@ -247,9 +244,7 @@ const validateParams = (query) => {
     let unknownParams = [];
     for (const k in query['params']) {
         const value = query['params'][k];
-        maxApi.post(`key: ${k}, value: ${value}`);
         if (!jobSchema.properties.params.properties.hasOwnProperty(k)) {
-            maxApi.post("unknown!!!");
             unknownParams.push({
                 param: k,
                 value: query['params'][k],

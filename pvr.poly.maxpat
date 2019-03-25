@@ -39,76 +39,6 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-20",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 832.0, 850.0, 49.0, 22.0 ],
-					"text" : "print sfr"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-19",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 124.0, 599.0, 73.0, 22.0 ],
-					"text" : "print poly_in"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-17",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 124.0, 559.0, 53.0, 22.0 ],
-					"text" : "prepend"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-16",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 124.0, 523.0, 72.0, 22.0 ],
-					"text" : "prepend set"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-14",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "int", "int" ],
-					"patching_rect" : [ 124.0, 490.0, 56.0, 22.0 ],
-					"text" : "thispoly~"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-12",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 124.0, 458.0, 58.0, 22.0 ],
-					"text" : "loadbang"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-13",
 					"maxclass" : "message",
 					"numinlets" : 2,
@@ -185,18 +115,6 @@
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 597.0, 692.0, 24.0, 24.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-4",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 816.0, 786.0, 53.0, 22.0 ],
-					"text" : "prepend"
 				}
 
 			}
@@ -303,7 +221,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 632.0, 748.0, 85.0, 22.0 ],
+					"patching_rect" : [ 632.0, 748.0, 87.0, 22.0 ],
 					"text" : "r #0-recMsg"
 				}
 
@@ -315,7 +233,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 824.5, 470.0, 90.0, 22.0 ],
+					"patching_rect" : [ 824.5, 470.0, 92.0, 22.0 ],
 					"text" : "r #0-playMsg"
 				}
 
@@ -326,7 +244,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 480.0, 429.0, 64.0, 22.0 ],
+					"patching_rect" : [ 480.0, 429.0, 66.0, 22.0 ],
 					"text" : "s #0-src"
 				}
 
@@ -338,7 +256,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 704.5, 553.0, 62.0, 22.0 ],
+					"patching_rect" : [ 704.5, 553.0, 64.0, 22.0 ],
 					"text" : "r #0-src"
 				}
 
@@ -349,7 +267,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 89.5, 324.0, 64.0, 22.0 ],
+					"patching_rect" : [ 89.5, 324.0, 66.0, 22.0 ],
 					"text" : "s #0-src"
 				}
 
@@ -360,7 +278,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 75.0, 185.0, 92.0, 22.0 ],
+					"patching_rect" : [ 75.0, 185.0, 94.0, 22.0 ],
 					"text" : "s #0-playMsg"
 				}
 
@@ -371,7 +289,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 169.5, 185.0, 87.0, 22.0 ],
+					"patching_rect" : [ 169.5, 185.0, 89.0, 22.0 ],
 					"text" : "s #0-recMsg"
 				}
 
@@ -419,7 +337,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 628.0, 649.0, 84.0, 22.0 ],
+					"patching_rect" : [ 628.0, 649.0, 86.0, 22.0 ],
 					"text" : "r #0-vstMsg"
 				}
 
@@ -430,7 +348,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 264.0, 331.5, 86.0, 22.0 ],
+					"patching_rect" : [ 264.0, 331.5, 88.0, 22.0 ],
 					"text" : "s #0-vstMsg"
 				}
 
@@ -554,10 +472,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 353.5, 810.0, 35.0, 22.0 ],
-					"saved_object_attributes" : 					{
-						"attr_comment" : ""
-					}
-,
 					"text" : "out 1"
 				}
 
@@ -1230,7 +1144,7 @@
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_invisible" : 1,
-							"parameter_longname" : "vst~[15]",
+							"parameter_longname" : "vst~[28]",
 							"parameter_shortname" : "vst~",
 							"parameter_type" : 3
 						}
@@ -1259,7 +1173,7 @@
 							"version" : 1,
 							"isbank" : 0,
 							"isbase64" : 1,
-							"blob" : "4591.CMlaKA....fQPMDZ....AzzPyIG...fi....A........................................DwrAbj.YNaD..P.....E..Tn8VYtkFdVUlbhA...........................3TY0QmbgwFHHEFarA....................................................................PSkQVZ00FHHEFarA...................................................................................TpS2aP...............vR..............uP+++++C..........B....H....PM....A....L..MUFYoUWa..............................................................................PSkQVZ00FHHEFarA.......................................................................LDagM2boMVXrA............................................................................P..........7.....................TPuW59+G...Ny6kt++A.............gHqIGp9G..7................................................................................................sq2ygp+A..v9+Ain5e..PzP........fmUOA......PiPhD.DX........+++++C..........ljta07+e.............TpS2aP.....PjsC..HX.............rD.........PJ8do6+e..v++++++++++mmIkwEA....Dhrlbn5e...t10Nk++G................V.......H....v.....sz6kt++A..fG8do6+e...rEln..AF...gy6kt++A..kkSTFD.....LNuW59+G....nvbP.....v5YAGD....vi..ONKkOvCmF.........PxNRC.DX...bNuW59+G..jmIkw0++A..GIUPLA.....jF.........qmEbP.....OB.73rT9.OLjF........jF.........uX........v30YkAA.....2y6kt++A..SicYFD...............................................D.....................DdgmIp9G.............P3Edln5e...zQj5..CF...Apxugp+A..oA.........rvP.Gp9G...gW3Yhp+A..P8PBC.LX...LIgt..CF...VUHK.vfA..vjD5B.LX..vi..ONKkOvCCEz6kt++A..e5z8FD.....t10Nk++G..7++++++++++...........PPuW59+G..jEPVw0++A..vjD5B.LX...jRuW59+G...D16kt++A..QcbYFD...........................eG+FD....fSOMkR.....b...........................................M8do6+e...rvP.Gp9G...KKjA.vfA..A.........f...........FfUI.PfA..J.........P..........Tf+++++++++nsqjbn5e..vi..ONKkOvCC..........u.........vi..ONKkOvCCEz6kt++A..Dhrlbn5e...zQuW59+G..HPkTw0++A..KS9do6+e..PUB...z9+++gf.++O......R9do6+e..v++++e.....................................D..........C....................fC06kt++A...C8do6+e...5PuW59+G..j6c7aP.....D.........PaRuW59+G..L..........7I8do6+e.............H5ppJC...............................................................................v.zlrI................................................................................................................................................................................OB.73rT9.O7++++++++++CH46kt++A...K8do6+e..v2PdEW++G.......................vZA...................PL8do6+e..vK..........lz6kt++A..Gnjb07+e........................++++++++++OPiSF..AF........................PiSF..AF...w16kt++A..vq8do6+e..fKLIWM+WSN2................TSLvTCm+C.f.....b8wFAPtRA..v.....C....1RuW59+G...dz6kt++A............vi..ONKkOvCCwz6kt++A...L8do6+e..P0MhjAA....7H.viyR4C7vDhrlbn5e..vi..ONKkOvC+H.viyR4C7v.R9do6+e...DSuW59+G...816kt++A..DNARFD....PSgMVZtQ2aygFHHQjNuT0bkI2buHWaoMFZgUFay8BQuMVcsUlazM2Kvg1ak4VZ3YWYxIlbk4FYkIWYx8Bb1ImKv8Fa44RaggGbgQG........26kt++A..1wFRFD....PA9y4+..L.....4JE..P9.A...............................3d8do6+e..PFPeEW++G.......................P..........D..........tvG+FD.....DTuW59+G..re.........T..........RTuW59+G...A8N..vfA............v++++++++++C..........A.........vC....................3d8do6+e...PTuW59+G.............wvG+FD....P...........C66kt++A..O..........fTuW59+G.............v5XT...X...xTuW59+G.............NT8do6+e...XYuW59+G.............rp8do6+e..P...........O06kt++A..qoKTFD.....TNFE...F..3zSSoz++A..J..........M7wuAA..........................E..........k16kt++A..++++++++++OhbUvAC.....C66kt++A..3ZW6T9+e...tXJPGp9G...3UXA......X.....C....nZuW59+G...Z16kt++A..XgUGbn5e...hX0AGp9G..fNlBzgp+A...V8do6+e..Pc5akAA....fy06kt++A...gCHmn5e...BVGA..BF...fzIR.PfA.............ftFHGp9G...i06kt++A..WzlUFD....................................PA2.kAA......nvbP.....XwWYb8+e.............bF1VYP.0.yM..JLGD......P..b....8+++...............................nvbP.....fY8do6+e..PA2.kAA....fGaRW4PA...XZ8do6+e...jF7...CF..fHWEbP.....++++++++++OdKS.Gp9G...n06kt++A..H2hUFD.....D.R.Gp9G..fr06kt++A..OB.73rT9.OLtWuW59+G..3Be7aP.....3ZW6T9+e..v++++++++++C..........fd8do6+e..PV.YEW++G...qiQA..fA..Po8do6+e...3VuW59+G..3XgVYP.....vc8do6+e..vEsYkAA....................................rltPYP.....P4XT...X.............................................f5LBzgp+A.............DdgmIp9G..fHWEbP.....HxUAGD.....P3.xIp9G...qI3aP.....OB.73rT9.OL...........K26kt++A..HxUAGD......C........XE16kt++A..Pk8do6+e..vRSREW++G...806kt++A..Dy8do6+e...hYuW5qK...ff.++up+A..vx8do6+e..v+B....AF..............5Zfbn5e...fXuW59+G..bQaVYP................................................VXuW59+G.......................vYXakAA....fX16kt++A..NVnUFD..........................htppx................................................................................L...............................................................................................................................................................bWNQYP.....Pk8do6+e..PZ3.kAA...............B..........DI.m..AF..PXNQYP.....vl8do6+e..fe5.kAA.....k16kt++A.............bI.m..AF..fb16kt++A............f..........TLJlYP.....P3Edln5e...PZuW59+G...5U3aP.....fm8do6+e..f+nXlAA.....C66kt++A..3aOAbn5e..f...........j16kt++A..vKk5..DX...NZuW59+G...h16kt++A..QFhUFD..........................fdE9FD.....DdgmIp9G...o16kt++A..C+UYFD....PA9++++++++C..........C.vdo6+e...nWguAA....P..6kt++A..P3Edln5e...nYuW59+G..7H.viyR4C7vP3Edln5e..PA9++++++++iHWEbP.....vx8do6+e...3euW59+G..PXNQYP.....fq8do6+e..PA2.kAA....PMcd7dJB...DlSTFD......auW59+G..TvMPYP.....43HHumh....NauW59+G..7H.viyR4C7vPXOdcn5e..v++++++++++C..........fr8do6+e...xsXkAA...............E3Om+C.f.....b8wFAPtRA.......................................................................................TA...F..f1tRxgp+A............f..........jX85hM.....xhutXC....Pu3qK1.....bb3........OB.73rT9.Ob...........916kt++A...R9do6+e...gHqIGp9G...G46kt++A..4v.RFD....PA9y4+..L.....4JE..P9...............................................................................vE.....9iYlY1O...f+.....PMMMcOMyLy9feee6iEKVzOWOJ79XXXX7Sud8xOyqgR+DBBB7yxA2rOrGEt9Xtb47C...vOeu2a+7S+z8C...vO.....3tc67C.....A.fPE7eRiDvM..............PA......vK5h1OuoLCQB"
+							"blob" : "4591.CMlaKA....fQPMDZ....AzzPyIG...fi....A........................................DwrAbj.YNaD..P.....E..Tn8VYtkFdVUlbhA...........................3TY0QmbgwFHHEFarA....................................................................PSkQVZ00FHHEFarA........................................................................PA....A....fbkkUt++A..HWYYk6+e...fUVV49+G.......uPA....H..B.......B....H....PM....A....L..MUFYoUWa..............................................................................PSkQVZ00FHHEFarA.......................................................................LDagM2boMVXrA.............................................................................vVVV49+G...skkUt++A.............F...........Hk0gg+A....RYcX3e...flTVGF9G.......P.....HbYYk6+e...BWVV49+G...rkkUt++A..E....D.....JWVV49+G..fxkkUt++A..3bYYk6+e.............fA.........vFfQUD......WVV49+G..fvkkUt++A.......D.....bWVV49+G...2kkUt++A..nbYYk6+e..fA....A.....4kkUt++A..PdYYk6+e...nWVV49+G.............X..........beVV49+G..f1kkUt++A..vcYYk6+e..PA....A....f8kkUt++A..XeYYk6+e...jWVV49+G..b....P.....3eYYk6+e...9WVV49+G..f.lkUt++A.............F....................PeYYk6+e...1WVV49+G.......P......gYYk6+e...PXVV49+G..f+kkUt++A..I....D.....XXVV49+G...FlkUt++A..vgYYk6+e.............fA.........A.....nEGQANXVV49+G...DlkUt++A..E....D.....pXVV49+G..fJlkUt++A..fgYYk6+e..fB....A....fLlkUt++A..HiYYk6+e...1XVV49+G.............X...........f6AEA.....JlkUt++A..nhYYk6+e..fA....A.....QlkUt++A..PjYYk6+e...xXVV49+G..r....P.....vjYYk6+e...LYVV49+G...TlkUt++A.............F.........fJ.GQQ.....HjYYk6+e...DYVV49+G..b....P.....3kYYk6+e...dYVV49+G...SlkUt++A..L....D.....lYVV49+G..fYlkUt++A..nlYYk6+e.............fA...........tGTD.....bYVV49+G..fWlkUt++A.......D.....3YVV49+G...dlkUt++A..XlYYk6+e.............D.....................D.........fspkUt++A.............TZVV49+G..fclkUt++A..fmYYk6+e..PA....A....fjlkUt++A..HoYYk6+e...VZVV49+G.............A.........v3e6D.......6mkUt++A..tzhGu7+e..v++++++++Avc....vK1...H....7u++6CRZVV49+G..X....P.....vpYYk6+e...rZVV49+G...rlkUt++A............P..........D.....PBbDEA....D................0lkUN.1NGEA.....nEGQQ......kvQT.qlkUt++A..G....D.....FaVV49+G..fwlkUt++A..nrYYk6+e.............D..........P....D..........X....v4+........D...........f6AEA.........f++A..XrYYk6+e..PB....A.....3lkUt++A...tYYk6+e...jaVV49+G.............A....................DunkUt++A.......T....P7hVV49+G..3+...........tGTD.....faVV49+G..n....P.....nuYYk6+e...5aVV49+G..f+lkUt++A............P..........D34c7x++A...AtGTD......f6AEA....v4+++O................bbVV49+G..f9lkUt++A..K....D.....TbVV49+G...EmkUt++A..fwYYk6+e.............D..........vpZYk6+e..P7hVV49+G...8mkUt++A..G.hGu7+e........b9+++O92NA......PwYYk6+e...C....A....fKmkUt++A..3xYYk6+e...xbVV49+G.............A.........fKs3wK++G..7+++++++e.bG....7hM...B....+6++9z++F.2A....uX...f.....tbVV49+G..7hA...B....XA.ffpE...ZI...nl...fB7jkUt++A...lj7D..X...fIIOA..F...fRxS..fA....PYkG.......TV4A....T....P.......PYkG....PA....A....X..kUd.....G.PYkG.......TV4A....T....P.....F.PYkG....vA.TV4A....j..kUd.....J.fyFF....vB.TV4A....v..EfQ.....TwjQDA................w8Na3++A...8YYk6+e...RvUHFF9G..T..........v8YYk6+e...9xv6K++G..fkwEfA.fA.............f.........fgmkUt++A..F.........PO.zC.9A.H..C.t.fM.LG.v0YYk6+e...XdVV49+G...lmkUt++A...5YYk6+e..faxU1ZA....3lbksV.....qIWXsE....faxU1ZA....rlbg0V.....q01ZsE................tmkUt++A..kKduu7+e.............................................f+qkUt++A...+ZYk6+e..P...........9qkUt++A............P4D36K++G...ymkUt++A..F..........DeVV49+G..Tv+79x++A..lLZIB..X..fA..........2mkUt++A..rMfuu7+e..fA..........7qkUt++A...+ZYk6+e..fA.........f8mkUt++A..B..........vuVV49+G.......................f...........UskUt++A..D4euu7+e..fZ.vwaH4o1ZB..........ngaYk6+e...VFW.F..F..fA...P.....A..........HmVV4B......Gd7x++A..................................ougGu7+e...1pVV49+G...A....bgQG.xUlb.H2buDFnVVV49+G...XRxS..fA...lj7D..X....JIOA..F.....vYW........b1E....PA.fF.A.......vYW.....E..Z.D....fA.TV4A....b..kUd........b1E....PA.fF.A....X..kUd.....G.PYkG....PB.TV4A....n..NaX.....K.PYkG.....C.P.FA....XG.........vNZYk6+e...vfVV49+G..HS2Lk0++A.............1qzHFF9G...knkUt++A..dKCuu7+e...hqQ.F..F..............B.........9fVV49+G..fA.........1Avb.PG.9A.H.HC.f.fL..EnkUt++A...EZYk6+e...PgVV49+G...VnkUt++A..tIWYqE....faxU1ZA....rlbg0V.....tIWYqE....vZxEVaA....rVaq0V................vgVV49+G..Tt389x++A.............................................1xVV49+G...prkUt++A..A..........vxVV49+G.............kSfuu7+e...DhVV49+G..fA.........vGZYk6+e..PA+y6K++G..XxnkH..fA..X..........ThVV49+G..v1.99x++A..X..........nxVV49+G...prkUt++A..X..........thVV49+G..H..........fJaYk6+e........................B..........L3VV49+G..Pj+89x++A..jm2MPX3e.............fztkUt++A..HtFAX..X..fihVV4A....D..........f....H....P.qVV49+G..................................ftqkUt++A............voA.........orkUt++A..F..........XqVV49+G..Tnu+9x++A..c....3+e...NqVV49+G...1c4zP......X13QD.....Jr.........blkUt++A...lj7D..X...fIIOA..F...fRxS..fA....v3QD.......LdDA....T..w2X.......v3QD....PA.DeiA....X..kUd.....G.PYkG.......LdDA....T..w2X.....F.PYkG....vA.TV4A....j..kUd.....J.fyFF....vB.TV4A....fqnkUt++A..fJaYk6+e.............................................fDbEhgg+A..vUZYk6+e..f2xv6K++G..f3ZDfA.fA.............f.........fAokUt++A..A.........PS.TVGF9G..fhrkUt++A..vMZYk6+e...XjVV49+G...FokUt++A...RZYk6+e..faxU1ZA....3lbksV.....qIWXsE.....vjVV49+G..z9m89x++A.............................................3jVV49+G..nbd2.gg+A...SZYk6+e..PA+y6K++G.............Jm2MPX3e...ziVV49+G...B4Dhgg+A..A.........fazEFa......DxuK..fA...VNCYD.....nE+t...F..f3ZDfA.fA..XTZYk6+e...FkVV49+G...TokUt++A..P......................................PbAL..........fbd2.gg+A..B....bE....ZkVV49+G..fVokUt++A..tUZYk6+e..PV.H.......jE.........b3ZYk6+e...ZkVV49+G...fqkUt++A..pA.GugjmZqIxwVV49+G.............mF.........b0VV49+G..fA..........4ZYk6+e..Pg996K++G..D....f++A..X3ZYk6+e...HlVV49+G..TvcloP.....2VNoB......VlVV49+G..fHmarP.....A..........gwRh...F..L..........rmKIF..X.....46E.....9iYlY1O...f+.....PMMMcOMyLy9feee6iEKVzOWOJ79XXXX7Sud8xOyqgR+DBBB7yxA2rOrGEt9Xtb47C...vOeu2a+7S+z8C...vO.....3tc67C.....A.fPE7eRiDvM..............PA......vK5h1OeVYha."
 						}
 ,
 						"snapshotlist" : 						{
@@ -1281,7 +1195,7 @@
 										"version" : 1,
 										"isbank" : 0,
 										"isbase64" : 1,
-										"blob" : "4591.CMlaKA....fQPMDZ....AzzPyIG...fi....A........................................DwrAbj.YNaD..P.....E..Tn8VYtkFdVUlbhA...........................3TY0QmbgwFHHEFarA....................................................................PSkQVZ00FHHEFarA...................................................................................TpS2aP...............vR..............uP+++++C..........B....H....PM....A....L..MUFYoUWa..............................................................................PSkQVZ00FHHEFarA.......................................................................LDagM2boMVXrA............................................................................P..........7.....................TPuW59+G...Ny6kt++A.............gHqIGp9G..7................................................................................................sq2ygp+A..v9+Ain5e..PzP........fmUOA......PiPhD.DX........+++++C..........ljta07+e.............TpS2aP.....PjsC..HX.............rD.........PJ8do6+e..v++++++++++mmIkwEA....Dhrlbn5e...t10Nk++G................V.......H....v.....sz6kt++A..fG8do6+e...rEln..AF...gy6kt++A..kkSTFD.....LNuW59+G....nvbP.....v5YAGD....vi..ONKkOvCmF.........PxNRC.DX...bNuW59+G..jmIkw0++A..GIUPLA.....jF.........qmEbP.....OB.73rT9.OLjF........jF.........uX........v30YkAA.....2y6kt++A..SicYFD...............................................D.....................DdgmIp9G.............P3Edln5e...zQj5..CF...Apxugp+A..oA.........rvP.Gp9G...gW3Yhp+A..P8PBC.LX...LIgt..CF...VUHK.vfA..vjD5B.LX..vi..ONKkOvCCEz6kt++A..e5z8FD.....t10Nk++G..7++++++++++...........PPuW59+G..jEPVw0++A..vjD5B.LX...jRuW59+G...D16kt++A..QcbYFD...........................eG+FD....fSOMkR.....b...........................................M8do6+e...rvP.Gp9G...KKjA.vfA..A.........f...........FfUI.PfA..J.........P..........Tf+++++++++nsqjbn5e..vi..ONKkOvCC..........u.........vi..ONKkOvCCEz6kt++A..Dhrlbn5e...zQuW59+G..HPkTw0++A..KS9do6+e..PUB...z9+++gf.++O......R9do6+e..v++++e.....................................D..........C....................fC06kt++A...C8do6+e...5PuW59+G..j6c7aP.....D.........PaRuW59+G..L..........7I8do6+e.............H5ppJC...............................................................................v.zlrI................................................................................................................................................................................OB.73rT9.O7++++++++++CH46kt++A...K8do6+e..v2PdEW++G.......................vZA...................PL8do6+e..vK..........lz6kt++A..Gnjb07+e........................++++++++++OPiSF..AF........................PiSF..AF...w16kt++A..vq8do6+e..fKLIWM+WSN2................TSLvTCm+C.f.....b8wFAPtRA..v.....C....1RuW59+G...dz6kt++A............vi..ONKkOvCCwz6kt++A...L8do6+e..P0MhjAA....7H.viyR4C7vDhrlbn5e..vi..ONKkOvC+H.viyR4C7v.R9do6+e...DSuW59+G...816kt++A..DNARFD....PSgMVZtQ2aygFHHQjNuT0bkI2buHWaoMFZgUFay8BQuMVcsUlazM2Kvg1ak4VZ3YWYxIlbk4FYkIWYx8Bb1ImKv8Fa44RaggGbgQG........26kt++A..1wFRFD....PA9y4+..L.....4JE..P9.A...............................3d8do6+e..PFPeEW++G.......................P..........D..........tvG+FD.....DTuW59+G..re.........T..........RTuW59+G...A8N..vfA............v++++++++++C..........A.........vC....................3d8do6+e...PTuW59+G.............wvG+FD....P...........C66kt++A..O..........fTuW59+G.............v5XT...X...xTuW59+G.............NT8do6+e...XYuW59+G.............rp8do6+e..P...........O06kt++A..qoKTFD.....TNFE...F..3zSSoz++A..J..........M7wuAA..........................E..........k16kt++A..++++++++++OhbUvAC.....C66kt++A..3ZW6T9+e...tXJPGp9G...3UXA......X.....C....nZuW59+G...Z16kt++A..XgUGbn5e...hX0AGp9G..fNlBzgp+A...V8do6+e..Pc5akAA....fy06kt++A...gCHmn5e...BVGA..BF...fzIR.PfA.............ftFHGp9G...i06kt++A..WzlUFD....................................PA2.kAA......nvbP.....XwWYb8+e.............bF1VYP.0.yM..JLGD......P..b....8+++...............................nvbP.....fY8do6+e..PA2.kAA....fGaRW4PA...XZ8do6+e...jF7...CF..fHWEbP.....++++++++++OdKS.Gp9G...n06kt++A..H2hUFD.....D.R.Gp9G..fr06kt++A..OB.73rT9.OLtWuW59+G..3Be7aP.....3ZW6T9+e..v++++++++++C..........fd8do6+e..PV.YEW++G...qiQA..fA..Po8do6+e...3VuW59+G..3XgVYP.....vc8do6+e..vEsYkAA....................................rltPYP.....P4XT...X.............................................f5LBzgp+A.............DdgmIp9G..fHWEbP.....HxUAGD.....P3.xIp9G...qI3aP.....OB.73rT9.OL...........K26kt++A..HxUAGD......C........XE16kt++A..Pk8do6+e..vRSREW++G...806kt++A..Dy8do6+e...hYuW5qK...ff.++up+A..vx8do6+e..v+B....AF..............5Zfbn5e...fXuW59+G..bQaVYP................................................VXuW59+G.......................vYXakAA....fX16kt++A..NVnUFD..........................htppx................................................................................L...............................................................................................................................................................bWNQYP.....Pk8do6+e..PZ3.kAA...............B..........DI.m..AF..PXNQYP.....vl8do6+e..fe5.kAA.....k16kt++A.............bI.m..AF..fb16kt++A............f..........TLJlYP.....P3Edln5e...PZuW59+G...5U3aP.....fm8do6+e..f+nXlAA.....C66kt++A..3aOAbn5e..f...........j16kt++A..vKk5..DX...NZuW59+G...h16kt++A..QFhUFD..........................fdE9FD.....DdgmIp9G...o16kt++A..C+UYFD....PA9++++++++C..........C.vdo6+e...nWguAA....P..6kt++A..P3Edln5e...nYuW59+G..7H.viyR4C7vP3Edln5e..PA9++++++++iHWEbP.....vx8do6+e...3euW59+G..PXNQYP.....fq8do6+e..PA2.kAA....PMcd7dJB...DlSTFD......auW59+G..TvMPYP.....43HHumh....NauW59+G..7H.viyR4C7vPXOdcn5e..v++++++++++C..........fr8do6+e...xsXkAA...............E3Om+C.f.....b8wFAPtRA.......................................................................................TA...F..f1tRxgp+A............f..........jX85hM.....xhutXC....Pu3qK1.....bb3........OB.73rT9.Ob...........916kt++A...R9do6+e...gHqIGp9G...G46kt++A..4v.RFD....PA9y4+..L.....4JE..P9...............................................................................vE.....9iYlY1O...f+.....PMMMcOMyLy9feee6iEKVzOWOJ79XXXX7Sud8xOyqgR+DBBB7yxA2rOrGEt9Xtb47C...vOeu2a+7S+z8C...vO.....3tc67C.....A.fPE7eRiDvM..............PA......vK5h1OuoLCQB"
+										"blob" : "4591.CMlaKA....fQPMDZ....AzzPyIG...fi....A........................................DwrAbj.YNaD..P.....E..Tn8VYtkFdVUlbhA...........................3TY0QmbgwFHHEFarA....................................................................PSkQVZ00FHHEFarA........................................................................PA....A....fbkkUt++A..HWYYk6+e...fUVV49+G.......uPA....H..B.......B....H....PM....A....L..MUFYoUWa..............................................................................PSkQVZ00FHHEFarA.......................................................................LDagM2boMVXrA.............................................................................vVVV49+G...skkUt++A.............F...........Hk0gg+A....RYcX3e...flTVGF9G.......P.....HbYYk6+e...BWVV49+G...rkkUt++A..E....D.....JWVV49+G..fxkkUt++A..3bYYk6+e.............fA.........vFfQUD......WVV49+G..fvkkUt++A.......D.....bWVV49+G...2kkUt++A..nbYYk6+e..fA....A.....4kkUt++A..PdYYk6+e...nWVV49+G.............X..........beVV49+G..f1kkUt++A..vcYYk6+e..PA....A....f8kkUt++A..XeYYk6+e...jWVV49+G..b....P.....3eYYk6+e...9WVV49+G..f.lkUt++A.............F....................PeYYk6+e...1WVV49+G.......P......gYYk6+e...PXVV49+G..f+kkUt++A..I....D.....XXVV49+G...FlkUt++A..vgYYk6+e.............fA.........A.....nEGQANXVV49+G...DlkUt++A..E....D.....pXVV49+G..fJlkUt++A..fgYYk6+e..fB....A....fLlkUt++A..HiYYk6+e...1XVV49+G.............X...........f6AEA.....JlkUt++A..nhYYk6+e..fA....A.....QlkUt++A..PjYYk6+e...xXVV49+G..r....P.....vjYYk6+e...LYVV49+G...TlkUt++A.............F.........fJ.GQQ.....HjYYk6+e...DYVV49+G..b....P.....3kYYk6+e...dYVV49+G...SlkUt++A..L....D.....lYVV49+G..fYlkUt++A..nlYYk6+e.............fA...........tGTD.....bYVV49+G..fWlkUt++A.......D.....3YVV49+G...dlkUt++A..XlYYk6+e.............D.....................D.........fspkUt++A.............TZVV49+G..fclkUt++A..fmYYk6+e..PA....A....fjlkUt++A..HoYYk6+e...VZVV49+G.............A.........v3e6D.......6mkUt++A..tzhGu7+e..v++++++++Avc....vK1...H....7u++6CRZVV49+G..X....P.....vpYYk6+e...rZVV49+G...rlkUt++A............P..........D.....PBbDEA....D................0lkUN.1NGEA.....nEGQQ......kvQT.qlkUt++A..G....D.....FaVV49+G..fwlkUt++A..nrYYk6+e.............D..........P....D..........X....v4+........D...........f6AEA.........f++A..XrYYk6+e..PB....A.....3lkUt++A...tYYk6+e...jaVV49+G.............A....................DunkUt++A.......T....P7hVV49+G..3+...........tGTD.....faVV49+G..n....P.....nuYYk6+e...5aVV49+G..f+lkUt++A............P..........D34c7x++A...AtGTD......f6AEA....v4+++O................bbVV49+G..f9lkUt++A..K....D.....TbVV49+G...EmkUt++A..fwYYk6+e.............D..........vpZYk6+e..P7hVV49+G...8mkUt++A..G.hGu7+e........b9+++O92NA......PwYYk6+e...C....A....fKmkUt++A..3xYYk6+e...xbVV49+G.............A.........fKs3wK++G..7+++++++e.bG....7hM...B....+6++9z++F.2A....uX...f.....tbVV49+G..7hA...B....XA.ffpE...ZI...nl...fB7jkUt++A...lj7D..X...fIIOA..F...fRxS..fA....PYkG.......TV4A....T....P.......PYkG....PA....A....X..kUd.....G.PYkG.......TV4A....T....P.....F.PYkG....vA.TV4A....j..kUd.....J.fyFF....vB.TV4A....v..EfQ.....TwjQDA................w8Na3++A...8YYk6+e...RvUHFF9G..T..........v8YYk6+e...9xv6K++G..fkwEfA.fA.............f.........fgmkUt++A..F.........PO.zC.9A.H..C.t.fM.LG.v0YYk6+e...XdVV49+G...lmkUt++A...5YYk6+e..faxU1ZA....3lbksV.....qIWXsE....faxU1ZA....rlbg0V.....q01ZsE................tmkUt++A..kKduu7+e.............................................f+qkUt++A...+ZYk6+e..P...........9qkUt++A............P4D36K++G...ymkUt++A..F..........DeVV49+G..Tv+79x++A..lLZIB..X..fA..........2mkUt++A..rMfuu7+e..fA..........7qkUt++A...+ZYk6+e..fA.........f8mkUt++A..B..........vuVV49+G.......................f...........UskUt++A..D4euu7+e..fZ.vwaH4o1ZB..........ngaYk6+e...VFW.F..F..fA...P.....A..........HmVV4B......Gd7x++A..................................ougGu7+e...1pVV49+G...A....bgQG.xUlb.H2buDFnVVV49+G...XRxS..fA...lj7D..X....JIOA..F.....vYW........b1E....PA.fF.A.......vYW.....E..Z.D....fA.TV4A....b..kUd........b1E....PA.fF.A....X..kUd.....G.PYkG....PB.TV4A....n..NaX.....K.PYkG.....C.P.FA....XG.........vNZYk6+e...vfVV49+G..HS2Lk0++A.............1qzHFF9G...knkUt++A..dKCuu7+e...hqQ.F..F..............B.........9fVV49+G..fA.........1Avb.PG.9A.H.HC.f.fL..EnkUt++A...EZYk6+e...PgVV49+G...VnkUt++A..tIWYqE....faxU1ZA....rlbg0V.....tIWYqE....vZxEVaA....rVaq0V................vgVV49+G..Tt389x++A.............................................1xVV49+G...prkUt++A..A..........vxVV49+G.............kSfuu7+e...DhVV49+G..fA.........vGZYk6+e..PA+y6K++G..XxnkH..fA..X..........ThVV49+G..v1.99x++A..X..........nxVV49+G...prkUt++A..X..........thVV49+G..H..........fJaYk6+e........................B..........L3VV49+G..Pj+89x++A..jm2MPX3e.............fztkUt++A..HtFAX..X..fihVV4A....D..........f....H....P.qVV49+G..................................ftqkUt++A............voA.........orkUt++A..F..........XqVV49+G..Tnu+9x++A..c....3+e...NqVV49+G...1c4zP......X13QD.....Jr.........blkUt++A...lj7D..X...fIIOA..F...fRxS..fA....v3QD.......LdDA....T..w2X.......v3QD....PA.DeiA....X..kUd.....G.PYkG.......LdDA....T..w2X.....F.PYkG....vA.TV4A....j..kUd.....J.fyFF....vB.TV4A....fqnkUt++A..fJaYk6+e.............................................fDbEhgg+A..vUZYk6+e..f2xv6K++G..f3ZDfA.fA.............f.........fAokUt++A..A.........PS.TVGF9G..fhrkUt++A..vMZYk6+e...XjVV49+G...FokUt++A...RZYk6+e..faxU1ZA....3lbksV.....qIWXsE.....vjVV49+G..z9m89x++A.............................................3jVV49+G..nbd2.gg+A...SZYk6+e..PA+y6K++G.............Jm2MPX3e...ziVV49+G...B4Dhgg+A..A.........fazEFa......DxuK..fA...VNCYD.....nE+t...F..f3ZDfA.fA..XTZYk6+e...FkVV49+G...TokUt++A..P......................................PbAL..........fbd2.gg+A..B....bE....ZkVV49+G..fVokUt++A..tUZYk6+e..PV.H.......jE.........b3ZYk6+e...ZkVV49+G...fqkUt++A..pA.GugjmZqIxwVV49+G.............mF.........b0VV49+G..fA..........4ZYk6+e..Pg996K++G..D....f++A..X3ZYk6+e...HlVV49+G..TvcloP.....2VNoB......VlVV49+G..fHmarP.....A..........gwRh...F..L..........rmKIF..X.....46E.....9iYlY1O...f+.....PMMMcOMyLy9feee6iEKVzOWOJ79XXXX7Sud8xOyqgR+DBBB7yxA2rOrGEt9Xtb47C...vOeu2a+7S+z8C...vO.....3tc67C.....A.fPE7eRiDvM..............PA......vK5h1OeVYha."
 									}
 ,
 									"fileref" : 									{
@@ -1289,7 +1203,25 @@
 										"filename" : "PhoenixVerb.maxsnap",
 										"filepath" : "~/Documents/Max 8/Snapshots",
 										"filepos" : -1,
-										"snapshotfileid" : "377b581279092e7ddfac1f8bb17ec0fc"
+										"snapshotfileid" : "0e08e7c4f001b1b4d7d8bf7761cfc52b"
+									}
+
+								}
+, 								{
+									"filetype" : "C74Snapshot",
+									"version" : 2,
+									"minorversion" : 0,
+									"name" : "PhoenixVerb",
+									"origin" : "PhoenixVerb.vst",
+									"type" : "VST",
+									"subtype" : "AudioEffect",
+									"embed" : 0,
+									"fileref" : 									{
+										"name" : "PhoenixVerb",
+										"filename" : "PhoenixVerb.maxsnap",
+										"filepath" : "~/Documents/Max 8/Snapshots",
+										"filepos" : -1,
+										"snapshotfileid" : "0e08e7c4f001b1b4d7d8bf7761cfc52b"
 									}
 
 								}
@@ -1341,7 +1273,7 @@
 						"followglobaltempo" : 0,
 						"formantcorrection" : 0,
 						"mode" : "basic",
-						"originallength" : [ 3442.379999999995107, "ticks" ],
+						"originallength" : [ 3604.979999999995016, "ticks" ],
 						"originaltempo" : 119.999999999999829,
 						"pitchcorrection" : 0,
 						"quality" : "basic",
@@ -1457,6 +1389,10 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 75.0, 26.0, 28.0, 22.0 ],
+					"saved_object_attributes" : 					{
+						"attr_comment" : ""
+					}
+,
 					"text" : "in 1"
 				}
 
@@ -1583,23 +1519,8 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-14", 0 ],
-					"source" : [ "obj-12", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-4", 0 ],
-					"order" : 1,
-					"source" : [ "obj-120", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-7", 0 ],
-					"order" : 3,
+					"order" : 2,
 					"source" : [ "obj-120", 0 ]
 				}
 
@@ -1615,10 +1536,10 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-87", 0 ],
-					"order" : 2,
+					"order" : 1,
 					"source" : [ "obj-120", 0 ],
 					"watchpoint_flags" : 2,
-					"watchpoint_id" : 57
+					"watchpoint_id" : 77
 				}
 
 			}
@@ -1667,16 +1588,8 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-4", 0 ],
-					"order" : 1,
-					"source" : [ "obj-124", 2 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-7", 0 ],
-					"order" : 3,
+					"order" : 2,
 					"source" : [ "obj-124", 2 ]
 				}
 
@@ -1692,10 +1605,10 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-87", 0 ],
-					"order" : 2,
+					"order" : 1,
 					"source" : [ "obj-124", 2 ],
 					"watchpoint_flags" : 2,
-					"watchpoint_id" : 58
+					"watchpoint_id" : 78
 				}
 
 			}
@@ -1755,13 +1668,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-16", 0 ],
-					"source" : [ "obj-14", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-91", 0 ],
 					"midpoints" : [ 253.0, 768.0, 233.0, 768.0, 233.0, 588.0, 321.0, 588.0 ],
 					"source" : [ "obj-143", 0 ]
@@ -1793,29 +1699,6 @@
 				"patchline" : 				{
 					"destination" : [ "obj-2", 0 ],
 					"source" : [ "obj-15", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-17", 0 ],
-					"order" : 1,
-					"source" : [ "obj-16", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-4", 0 ],
-					"order" : 0,
-					"source" : [ "obj-16", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-19", 0 ],
-					"source" : [ "obj-17", 0 ]
 				}
 
 			}
@@ -1915,7 +1798,7 @@
 					"destination" : [ "obj-71", 0 ],
 					"source" : [ "obj-187", 0 ],
 					"watchpoint_flags" : 2,
-					"watchpoint_id" : 59
+					"watchpoint_id" : 79
 				}
 
 			}
@@ -1928,19 +1811,10 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-4", 0 ],
-					"order" : 0,
-					"source" : [ "obj-190", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-87", 0 ],
-					"order" : 1,
 					"source" : [ "obj-190", 0 ],
 					"watchpoint_flags" : 2,
-					"watchpoint_id" : 60
+					"watchpoint_id" : 80
 				}
 
 			}
@@ -2011,13 +1885,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-20", 0 ],
-					"source" : [ "obj-4", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-15", 0 ],
 					"source" : [ "obj-5", 0 ]
 				}
@@ -2049,15 +1916,6 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-15", 0 ],
-					"order" : 1,
-					"source" : [ "obj-6", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-17", 0 ],
-					"order" : 0,
 					"source" : [ "obj-6", 0 ]
 				}
 
