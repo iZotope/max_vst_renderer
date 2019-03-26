@@ -44,7 +44,7 @@ const crypto = require('crypto');
 
 const port = process.env.PVR_PORT || 8080;
 
-const instanceCount = 36;
+const instanceCount = 24;
 
 const ResponseCode = {
     // submit response codes
@@ -157,30 +157,44 @@ const readSoundFileList = (file, onClose) => {
 
 // Max functions
 
-const doWork = (index) => {
-    while (workQueue.length != 0 && workQueue[0].fileIndex >= defaultSoundFiles.length) {
-        workQueue.shift();
+const findWork = () => {
+    let work = null;
+    while (work === null && workQueue.legnth != 0) {
+        while (workQueue.length != 0 && workQueue[0].fileIndex >= defaultSoundFiles.length) {
+            workQueue.shift();
+        }
+        if (workQueue.length == 0) {
+            return null;
+        }        
+        let job = workQueue[0];
+        const soundFiles = job.sound_files === undefined ? defaultSoundFiles : job.sound_files;;
+        const inDir = job.input_dir === undefined ? defaultInputDir : job.input_dir;
+        const fileName = soundFiles[job.fileIndex];
+        const filePath = `${inDir}/${fileName}`;
+        if (!fs.existsSync(filePath)) {
+            maxApi.post(`Input file not found: ${filePath}`, maxApi.ERROR);
+            ++job.fileIndex;
+            continue;
+        }
+        work = {
+            job: job,
+            index: job.fileIndex++,
+            fileCount: soundFiles.length,
+            jobCount: workQueue.length,
+            inputFile: fileName,
+            inputPath: filePath
+        };
     }
-    if (workQueue.length == 0) {
-        return;
-    }
-    let workItem = workQueue[0];
-    availableInstances[index] = false;
+    return work;
+};
 
-    const soundFiles = workItem.sound_files === undefined ? defaultSoundFiles : workItem.sound_files;;
-    const inDir = workItem.input_dir === undefined ? defaultInputDir : workItem.input_dir;
+const doWork = async (index, work) => {
+    let workItem = work.job;
     const outDir = workItem.output_dir === undefined ? defaultOutputDir : workItem.output_dir;
-    const fileName = soundFiles[workItem.fileIndex];
-    const filePath = `${inDir}/${fileName}`;
+    const fileName = work.inputFile;
+    const filePath = work.inputPath;
     const runOutDir = `${outDir}/${workItem.run_id}/`;
 
-    if (!fs.existsSync(filePath)) {
-        maxApi.post(`Input file not found: ${filePath}`, maxApi.ERROR);
-        ++workItem.fileIndex;
-        availableInstances[index] = true;
-        doWork(index);
-        return;
-    }
     if (!fs.existsSync(runOutDir)) {
         fs.mkdirSync(runOutDir);
     }
@@ -192,17 +206,22 @@ const doWork = (index) => {
         maxApi.outlet("param", paramNameMappings[k], workItem.params[k]);
     }
     maxApi.outlet("render");
-    maxApi.post(`Rendering file ${++workItem.fileIndex} of ${soundFiles.length} (job 1 of ${workQueue.length})`);
 };
 
-const tryWork = async () => {
+const tryWork = () => {
     const findAvailableInstance = () => {
         return availableInstances.findIndex((value) => { return value; });
     };
     let index = findAvailableInstance();
 
     while (index >= 0 && workQueue.length > 0) {
-        doWork(index);
+        let work = findWork();
+        if (work === null) {
+            return;
+        }
+        availableInstances[index] = false;
+        maxApi.post(`Rendering file ${work.index+1} of ${work.fileCount} (job 1 of ${work.jobCount})`);
+        doWork(index, work);
         index = findAvailableInstance();
     }
 };
@@ -257,7 +276,7 @@ const validateParams = (query) => {
                 value: query['params'][k],
                 error: "Out of range"
             });
-            delete query['params'][k];            
+            delete query['params'][k];
         }
 
     }
