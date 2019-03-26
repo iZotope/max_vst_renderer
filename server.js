@@ -195,7 +195,7 @@ const doWork = (index) => {
     maxApi.post(`Rendering file ${++workItem.fileIndex} of ${soundFiles.length} (job 1 of ${workQueue.length})`);
 };
 
-const tryWork = () => {
+const tryWork = async () => {
     const findAvailableInstance = () => {
         return availableInstances.findIndex((value) => { return value; });
     };
