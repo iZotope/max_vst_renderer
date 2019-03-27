@@ -142,32 +142,44 @@ var workQueue = [];
 
 // Shared functions
 
-const readSoundFileList = (file, onClose) => {
-    let soundFiles = [];
-    const lineReader = require('readline').createInterface({
-        input: fs.createReadStream(file)
+const readSoundFileList = (file) => {
+    return new Promise((resolve, reject) => {
+        let soundFiles = [];
+        const lineReader = require('readline').createInterface({
+            input: fs.createReadStream(file)
+        });
+        lineReader.on('line', (line) => {
+            soundFiles.push(line);
+        });
+        lineReader.on('close', () => {
+            resolve(soundFiles);
+        });
+        lineReader.on('SIGINT', () => {
+            resolve("SIGINT");
+        });
+        lineReader.on('SIGSTP', () => {
+            reject("SIGSTP");
+        });
     });
-    lineReader.on('line', (line) => {
-        soundFiles.push(line);
-    });
-    lineReader.on('close', () => {
-        onClose(soundFiles);
-    });
+
 };
 
 // Max functions
 
 const findWork = () => {
     let work = null;
+    let getSoundFiles = (job) => {
+        return job.input_files === undefined ? defaultSoundFiles : job.input_files;
+    };
     while (work === null && workQueue.legnth != 0) {
-        while (workQueue.length != 0 && workQueue[0].fileIndex >= defaultSoundFiles.length) {
+        while (workQueue.length != 0 && workQueue[0].fileIndex >= getSoundFiles(workQueue[0]).length) {
             workQueue.shift();
         }
         if (workQueue.length == 0) {
             return null;
-        }        
+        }
         let job = workQueue[0];
-        const soundFiles = job.sound_files === undefined ? defaultSoundFiles : job.sound_files;;
+        const soundFiles = getSoundFiles(job);
         const inDir = job.input_dir === undefined ? defaultInputDir : job.input_dir;
         const fileName = soundFiles[job.fileIndex];
         const filePath = `${inDir}/${fileName}`;
@@ -232,11 +244,9 @@ const tryWork = async () => {
 };
 
 const maxHandlers = {
-    filelist: (file) => {
-        readSoundFileList(file, (soundFiles) => {
-            defaultSoundFiles = soundFiles;
-            maxApi.post(`${defaultSoundFiles.length} files ready in default sound file list.`);
-        });
+    filelist: async (file) => {
+        defaultSoundFiles = await readSoundFileList(file);
+        maxApi.post(`${defaultSoundFiles.length} files ready in default sound file list.`);
     },
     indir: (dir) => {
         defaultInputDir = dir;
@@ -321,12 +331,11 @@ const validateOutputDirectory = (query) => {
     };
 };
 
-const validateSoundFileList = (query) => {
-    const soundFileList = query['sound_files'];
+const validateSoundFileList = async (query) => {
+    let soundFileList = query['input_files'];
     if (soundFileList === undefined) {
         return {valid: true};
     }
-    return {valid: true};
     const validateFiles = (files) => {
         const inDir = query['input_dir'] === undefined ? defaultInputDir : query['input_dir'];
         const getPath = (f) => {
@@ -344,7 +353,7 @@ const validateSoundFileList = (query) => {
                 message: "Missing sound files",
                 details: {
                     input_dir: inDir,
-                    sound_files: missingFiles
+                    input_files: missingFiles
                 }
             };
         }
@@ -353,14 +362,12 @@ const validateSoundFileList = (query) => {
     if (Array.isArray(soundFileList)) {
         const validation = validateFiles(soundFileList);
         if (!validation.valid) {
+            query['input_files'] = [];
             return validation;
         }
     } else if (fs.existsSync(soundFileList)) {
-        readSoundFileList(soundFileList, (files) => {
-            soundFileList = files;
-        });
+        soundFileList = await readSoundFileList(soundFileList);
         const validation = validateFiles(soundFileList);
-        query['sound_files'] = soundFileList;
         if (!validation.valid) {
             return validation;
         }
@@ -371,10 +378,11 @@ const validateSoundFileList = (query) => {
             details: soundFileList
         };
     }
+    query['input_files'] = soundFileList;
     return {valid: true};
 };
 
-const submitHandler = (req, res) => {
+const submitHandler = async (req, res) => {
     const schemaCheck = validate(req.body, jobSchema);
     if (!schemaCheck.valid) {
         res.status(ResponseCode.InvalidSchema).json({
@@ -393,7 +401,7 @@ const submitHandler = (req, res) => {
         res.status(oututDirCheck.status).json(inputDirCheck);
     }
     const paramCheck = validateParams(req.body);
-    const fileCheck = validateSoundFileList(req.body);
+    const fileCheck = await validateSoundFileList(req.body);
     if (!paramCheck.valid && !fileCheck.valid) {
         res.status(ResponseCode.UnknownParamAndMissingSoundFiles).json({
             status: ResponseCode.UnknownParamAndMissingSoundFiles,
@@ -421,7 +429,7 @@ const statusHandler = (req, res) => {
         });
     } else {
         const job = workQueue[0];
-        const soundFiles = job.sound_files === undefined ? defaultSoundFiles : job.sound_files;
+        const soundFiles = job.input_files === undefined ? defaultSoundFiles : job.input_files;
         res.status(ResponseCode.RunningJobs).json({
             status: ResponseCode.RunningJobs,
             message: `Rendering file ${workQueue[0].fileIndex+1} of ${soundFiles.length} (job 1 of ${workQueue.length})`
@@ -434,7 +442,7 @@ const jobStatusHandler = (req, res) => {
         return value.run_id === req.params.run_id;
     });
     if (job) {
-        const soundFiles = job.sound_files === undefined ? defaultSoundFiles : job.sound_files;
+        const soundFiles = job.input_files === undefined ? defaultSoundFiles : job.input_files;
         if (job.fileIndex < soundFiles.length) {
             res.status(ResponseCode.RunningJobs).json({
                 status: ResponseCode.RunningJobs,
