@@ -237,8 +237,8 @@ const tryWork = async () => {
             return;
         }
         availableInstances[index] = false;
-        maxApi.post(`Rendering file ${work.index+1} of ${work.fileCount} (job 1 of ${work.jobCount})`);
         doWork(index, work);
+        await maxApi.post(`Rendering file ${work.index+1} of ${work.fileCount} (job 1 of ${work.jobCount})`);
         index = findAvailableInstance();
     }
 };
