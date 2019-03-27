@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 0,
-			"revision" : 3,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -39,12 +39,84 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-23",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 264.0, 159.0, 41.0, 22.0 ],
+					"text" : "buddy"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-22",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 169.5, 159.0, 41.0, 22.0 ],
+					"text" : "buddy"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-21",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 75.0, 159.0, 41.0, 22.0 ],
+					"text" : "buddy"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-14",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 264.0, 124.0, 55.0, 22.0 ],
+					"text" : "zl.slice 2"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-12",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 169.5, 124.0, 55.0, 22.0 ],
+					"text" : "zl.slice 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-4",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 75.0, 124.0, 55.0, 22.0 ],
+					"text" : "zl.slice 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-13",
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 649.0, 72.0, 112.0, 22.0 ],
+					"patching_rect" : [ 649.0, 84.0, 112.0, 22.0 ],
 					"text" : "param Diffusion 0.9"
 				}
 
@@ -56,7 +128,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 649.0, 13.0, 151.0, 22.0 ],
+					"patching_rect" : [ 649.0, 25.0, 151.0, 22.0 ],
 					"text" : "read /tmp/in//01-C-2-6.wav"
 				}
 
@@ -68,7 +140,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 649.0, 42.0, 347.0, 22.0 ],
+					"patching_rect" : [ 649.0, 54.0, 347.0, 22.0 ],
 					"text" : "write /tmp/out//xyzz//70cc02370b1bbe0007ff16ac42109b41.wav"
 				}
 
@@ -80,7 +152,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "float" ],
-					"patching_rect" : [ 858.0, 678.0, 80.0, 13.0 ]
+					"patching_rect" : [ 858.0, 837.0, 80.0, 13.0 ]
 				}
 
 			}
@@ -91,7 +163,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "float" ],
-					"patching_rect" : [ 858.0, 752.5, 80.0, 13.0 ]
+					"patching_rect" : [ 858.0, 911.5, 80.0, 13.0 ]
 				}
 
 			}
@@ -102,7 +174,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "float" ],
-					"patching_rect" : [ 858.0, 732.0, 80.0, 13.0 ]
+					"patching_rect" : [ 858.0, 891.0, 80.0, 13.0 ]
 				}
 
 			}
@@ -114,7 +186,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 597.0, 692.0, 24.0, 24.0 ]
+					"patching_rect" : [ 597.0, 851.0, 24.0, 24.0 ]
 				}
 
 			}
@@ -125,7 +197,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "int" ],
-					"patching_rect" : [ 169.5, 106.0, 75.0, 22.0 ],
+					"patching_rect" : [ 169.5, 265.0, 75.0, 22.0 ],
 					"text" : "conformpath"
 				}
 
@@ -137,7 +209,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "int" ],
-					"patching_rect" : [ 75.0, 106.0, 75.0, 22.0 ],
+					"patching_rect" : [ 75.0, 265.0, 75.0, 22.0 ],
 					"text" : "conformpath"
 				}
 
@@ -149,7 +221,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 408.0, 24.0, 43.0, 22.0 ],
+					"patching_rect" : [ 408.0, 36.0, 43.0, 22.0 ],
 					"text" : "render"
 				}
 
@@ -161,7 +233,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 343.0, 24.0, 91.0, 22.0 ],
+					"patching_rect" : [ 343.0, 36.0, 91.0, 22.0 ],
 					"text" : "param Gain 0.5"
 				}
 
@@ -173,7 +245,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 243.5, 24.0, 87.0, 22.0 ],
+					"patching_rect" : [ 243.5, 36.0, 87.0, 22.0 ],
 					"text" : "write hello.wav"
 				}
 
@@ -185,7 +257,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 144.0, 24.0, 86.0, 22.0 ],
+					"patching_rect" : [ 144.0, 36.0, 86.0, 22.0 ],
 					"text" : "read hello.wav"
 				}
 
@@ -197,7 +269,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "int" ],
-					"patching_rect" : [ 531.0, 374.0, 35.0, 22.0 ],
+					"patching_rect" : [ 531.0, 533.0, 35.0, 22.0 ],
 					"text" : "t 2. 0"
 				}
 
@@ -209,7 +281,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 531.0, 345.0, 61.0, 22.0 ],
+					"patching_rect" : [ 531.0, 504.0, 61.0, 22.0 ],
 					"text" : "delay 618"
 				}
 
@@ -221,7 +293,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 632.0, 748.0, 87.0, 22.0 ],
+					"patching_rect" : [ 632.0, 907.0, 87.0, 22.0 ],
 					"text" : "r #0-recMsg"
 				}
 
@@ -233,7 +305,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 824.5, 470.0, 92.0, 22.0 ],
+					"patching_rect" : [ 824.5, 629.0, 92.0, 22.0 ],
 					"text" : "r #0-playMsg"
 				}
 
@@ -244,7 +316,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 480.0, 429.0, 66.0, 22.0 ],
+					"patching_rect" : [ 480.0, 588.0, 66.0, 22.0 ],
 					"text" : "s #0-src"
 				}
 
@@ -256,7 +328,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 704.5, 553.0, 64.0, 22.0 ],
+					"patching_rect" : [ 704.5, 712.0, 64.0, 22.0 ],
 					"text" : "r #0-src"
 				}
 
@@ -267,7 +339,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 89.5, 324.0, 66.0, 22.0 ],
+					"patching_rect" : [ 89.5, 483.0, 66.0, 22.0 ],
 					"text" : "s #0-src"
 				}
 
@@ -278,7 +350,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 75.0, 185.0, 94.0, 22.0 ],
+					"patching_rect" : [ 75.0, 344.0, 94.0, 22.0 ],
 					"text" : "s #0-playMsg"
 				}
 
@@ -289,7 +361,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 169.5, 185.0, 89.0, 22.0 ],
+					"patching_rect" : [ 169.5, 344.0, 89.0, 22.0 ],
 					"text" : "s #0-recMsg"
 				}
 
@@ -301,7 +373,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 202.0, 273.0, 242.0, 22.0 ],
+					"patching_rect" : [ 202.0, 432.0, 242.0, 22.0 ],
 					"text" : "Warning: Setting param $1 $2 during render"
 				}
 
@@ -313,7 +385,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 202.0, 364.0, 139.0, 22.0 ],
+					"patching_rect" : [ 202.0, 523.0, 139.0, 22.0 ],
 					"text" : "pvar listenerSignalCount"
 				}
 
@@ -325,7 +397,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "float" ],
-					"patching_rect" : [ 176.0, 316.0, 45.0, 22.0 ],
+					"patching_rect" : [ 176.0, 475.0, 45.0, 22.0 ],
 					"text" : "t 2 l -1."
 				}
 
@@ -337,7 +409,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 628.0, 649.0, 86.0, 22.0 ],
+					"patching_rect" : [ 628.0, 808.0, 86.0, 22.0 ],
 					"text" : "r #0-vstMsg"
 				}
 
@@ -348,7 +420,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 264.0, 331.5, 88.0, 22.0 ],
+					"patching_rect" : [ 264.0, 490.5, 88.0, 22.0 ],
 					"text" : "s #0-vstMsg"
 				}
 
@@ -360,7 +432,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 125.0, 364.0, 59.0, 22.0 ],
+					"patching_rect" : [ 125.0, 523.0, 59.0, 22.0 ],
 					"text" : "pvar amp"
 				}
 
@@ -372,7 +444,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 30.0, 364.0, 91.0, 22.0 ],
+					"patching_rect" : [ 30.0, 523.0, 91.0, 22.0 ],
 					"text" : "pvar stateIndex"
 				}
 
@@ -384,7 +456,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 531.0, 435.0, 139.0, 22.0 ],
+					"patching_rect" : [ 531.0, 594.0, 139.0, 22.0 ],
 					"text" : "pvar listenerSignalCount"
 				}
 
@@ -396,7 +468,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 868.0, 575.0, 91.0, 22.0 ],
+					"patching_rect" : [ 868.0, 734.0, 91.0, 22.0 ],
 					"text" : "pvar stateIndex"
 				}
 
@@ -408,7 +480,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 243.5, 736.0, 91.0, 22.0 ],
+					"patching_rect" : [ 243.5, 895.0, 91.0, 22.0 ],
 					"text" : "pvar stateIndex"
 				}
 
@@ -422,7 +494,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 771.5, 617.0, 50.0, 22.0 ],
+					"patching_rect" : [ 771.5, 776.0, 50.0, 22.0 ],
 					"varname" : "amp"
 				}
 
@@ -436,7 +508,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 998.0, 786.0, 50.0, 22.0 ],
+					"patching_rect" : [ 998.0, 945.0, 50.0, 22.0 ],
 					"varname" : "listenerSignalCount"
 				}
 
@@ -448,7 +520,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 624.0, 462.0, 59.0, 22.0 ],
+					"patching_rect" : [ 624.0, 621.0, 59.0, 22.0 ],
 					"text" : "pvar amp"
 				}
 
@@ -460,7 +532,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "float" ],
-					"patching_rect" : [ 480.0, 315.0, 39.0, 22.0 ],
+					"patching_rect" : [ 480.0, 474.0, 39.0, 22.0 ],
 					"text" : "t 0 -1."
 				}
 
@@ -471,7 +543,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 353.5, 810.0, 35.0, 22.0 ],
+					"patching_rect" : [ 353.5, 969.0, 35.0, 22.0 ],
 					"text" : "out 1"
 				}
 
@@ -483,7 +555,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "int" ],
-					"patching_rect" : [ 353.5, 775.0, 56.0, 22.0 ],
+					"patching_rect" : [ 353.5, 934.0, 56.0, 22.0 ],
 					"text" : "thispoly~"
 				}
 
@@ -495,7 +567,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 353.5, 736.0, 54.0, 22.0 ],
+					"patching_rect" : [ 353.5, 895.0, 54.0, 22.0 ],
 					"text" : "deferlow"
 				}
 
@@ -507,7 +579,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "bang", "int", "int", "float" ],
-					"patching_rect" : [ 354.5, 680.0, 59.0, 22.0 ],
+					"patching_rect" : [ 354.5, 839.0, 59.0, 22.0 ],
 					"text" : "t b 1 0 -1."
 				}
 
@@ -519,7 +591,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 380.5, 645.0, 47.0, 22.0 ],
+					"patching_rect" : [ 380.5, 804.0, 47.0, 22.0 ],
 					"text" : "delay 2"
 				}
 
@@ -531,7 +603,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "float" ],
-					"patching_rect" : [ 662.0, 315.0, 25.0, 22.0 ],
+					"patching_rect" : [ 662.0, 474.0, 25.0, 22.0 ],
 					"text" : "t 3."
 				}
 
@@ -543,7 +615,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 868.0, 543.0, 22.0, 22.0 ],
+					"patching_rect" : [ 868.0, 702.0, 22.0, 22.0 ],
 					"text" : "t 5"
 				}
 
@@ -555,7 +627,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 594.0, 550.0, 22.0, 22.0 ],
+					"patching_rect" : [ 594.0, 709.0, 22.0, 22.0 ],
 					"text" : "t 1"
 				}
 
@@ -567,7 +639,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 594.0, 519.0, 61.0, 22.0 ],
+					"patching_rect" : [ 594.0, 678.0, 61.0, 22.0 ],
 					"text" : "delay 128"
 				}
 
@@ -579,7 +651,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 594.0, 490.0, 54.0, 22.0 ],
+					"patching_rect" : [ 594.0, 649.0, 54.0, 22.0 ],
 					"text" : "deferlow"
 				}
 
@@ -591,7 +663,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "bang", "int", "float", "float" ],
-					"patching_rect" : [ 592.0, 315.0, 67.0, 22.0 ],
+					"patching_rect" : [ 592.0, 474.0, 67.0, 22.0 ],
 					"text" : "t b 2 -3. -1."
 				}
 
@@ -603,7 +675,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 298.5, 157.0, 22.0, 22.0 ],
+					"patching_rect" : [ 298.5, 316.0, 22.0, 22.0 ],
 					"text" : "t 3"
 				}
 
@@ -615,7 +687,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 298.5, 127.0, 32.0, 22.0 ],
+					"patching_rect" : [ 298.5, 286.0, 32.0, 22.0 ],
 					"text" : "gate"
 				}
 
@@ -627,7 +699,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 298.5, 95.0, 29.5, 22.0 ],
+					"patching_rect" : [ 298.5, 254.0, 29.5, 22.0 ],
 					"text" : "< 4"
 				}
 
@@ -639,7 +711,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 169.5, 147.0, 83.0, 22.0 ],
+					"patching_rect" : [ 169.5, 306.0, 83.0, 22.0 ],
 					"text" : "open $1 wave"
 				}
 
@@ -651,7 +723,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 75.0, 147.0, 83.0, 22.0 ],
+					"patching_rect" : [ 75.0, 306.0, 83.0, 22.0 ],
 					"text" : "prepend open"
 				}
 
@@ -663,7 +735,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 531.0, 315.0, 54.0, 22.0 ],
+					"patching_rect" : [ 531.0, 474.0, 54.0, 22.0 ],
 					"text" : "deferlow"
 				}
 
@@ -675,7 +747,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 284.0, 678.0, 22.0, 22.0 ],
+					"patching_rect" : [ 284.0, 837.0, 22.0, 22.0 ],
 					"text" : "t 4"
 				}
 
@@ -687,7 +759,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 284.0, 645.0, 54.0, 22.0 ],
+					"patching_rect" : [ 284.0, 804.0, 54.0, 22.0 ],
 					"text" : "deferlow"
 				}
 
@@ -699,7 +771,7 @@
 					"numinlets" : 6,
 					"numoutlets" : 6,
 					"outlettype" : [ "bang", "bang", "bang", "bang", "bang", "" ],
-					"patching_rect" : [ 480.0, 275.0, 183.0, 22.0 ],
+					"patching_rect" : [ 480.0, 434.0, 183.0, 22.0 ],
 					"text" : "sel 1 2 3 4 5"
 				}
 
@@ -716,7 +788,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 0,
-							"revision" : 3,
+							"revision" : 4,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -1091,7 +1163,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 704.5, 822.0, 312.5, 22.0 ],
+					"patching_rect" : [ 704.5, 981.0, 312.5, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -1110,7 +1182,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 5,
 					"outlettype" : [ "", "", "", "", "" ],
-					"patching_rect" : [ 311.5, 599.0, 61.0, 22.0 ],
+					"patching_rect" : [ 311.5, 758.0, 61.0, 22.0 ],
 					"text" : "gate 5"
 				}
 
@@ -1122,7 +1194,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 704.5, 786.0, 59.0, 22.0 ],
+					"patching_rect" : [ 704.5, 945.0, 59.0, 22.0 ],
 					"text" : "sfrecord~"
 				}
 
@@ -1139,12 +1211,12 @@
 					"numoutlets" : 8,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "signal", "signal", "", "list", "int", "", "", "" ],
-					"patching_rect" : [ 708.0, 695.0, 141.0, 22.0 ],
+					"patching_rect" : [ 708.0, 854.0, 141.0, 22.0 ],
 					"save" : [ "#N", "vst~", "loaduniqueid", 0, 2, 2, "PhoenixVerb.vst", ";" ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_invisible" : 1,
-							"parameter_longname" : "vst~[28]",
+							"parameter_longname" : "vst~[25]",
 							"parameter_shortname" : "vst~",
 							"parameter_type" : 3
 						}
@@ -1173,7 +1245,7 @@
 							"version" : 1,
 							"isbank" : 0,
 							"isbase64" : 1,
-							"blob" : "4591.CMlaKA....fQPMDZ....AzzPyIG...fi....A........................................DwrAbj.YNaD..P.....E..Tn8VYtkFdVUlbhA...........................3TY0QmbgwFHHEFarA....................................................................PSkQVZ00FHHEFarA........................................................................PA....A....fbkkUt++A..HWYYk6+e...fUVV49+G.......uPA....H..B.......B....H....PM....A....L..MUFYoUWa..............................................................................PSkQVZ00FHHEFarA.......................................................................LDagM2boMVXrA.............................................................................vVVV49+G...skkUt++A.............F...........Hk0gg+A....RYcX3e...flTVGF9G.......P.....HbYYk6+e...BWVV49+G...rkkUt++A..E....D.....JWVV49+G..fxkkUt++A..3bYYk6+e.............fA.........vFfQUD......WVV49+G..fvkkUt++A.......D.....bWVV49+G...2kkUt++A..nbYYk6+e..fA....A.....4kkUt++A..PdYYk6+e...nWVV49+G.............X..........beVV49+G..f1kkUt++A..vcYYk6+e..PA....A....f8kkUt++A..XeYYk6+e...jWVV49+G..b....P.....3eYYk6+e...9WVV49+G..f.lkUt++A.............F....................PeYYk6+e...1WVV49+G.......P......gYYk6+e...PXVV49+G..f+kkUt++A..I....D.....XXVV49+G...FlkUt++A..vgYYk6+e.............fA.........A.....nEGQANXVV49+G...DlkUt++A..E....D.....pXVV49+G..fJlkUt++A..fgYYk6+e..fB....A....fLlkUt++A..HiYYk6+e...1XVV49+G.............X...........f6AEA.....JlkUt++A..nhYYk6+e..fA....A.....QlkUt++A..PjYYk6+e...xXVV49+G..r....P.....vjYYk6+e...LYVV49+G...TlkUt++A.............F.........fJ.GQQ.....HjYYk6+e...DYVV49+G..b....P.....3kYYk6+e...dYVV49+G...SlkUt++A..L....D.....lYVV49+G..fYlkUt++A..nlYYk6+e.............fA...........tGTD.....bYVV49+G..fWlkUt++A.......D.....3YVV49+G...dlkUt++A..XlYYk6+e.............D.....................D.........fspkUt++A.............TZVV49+G..fclkUt++A..fmYYk6+e..PA....A....fjlkUt++A..HoYYk6+e...VZVV49+G.............A.........v3e6D.......6mkUt++A..tzhGu7+e..v++++++++Avc....vK1...H....7u++6CRZVV49+G..X....P.....vpYYk6+e...rZVV49+G...rlkUt++A............P..........D.....PBbDEA....D................0lkUN.1NGEA.....nEGQQ......kvQT.qlkUt++A..G....D.....FaVV49+G..fwlkUt++A..nrYYk6+e.............D..........P....D..........X....v4+........D...........f6AEA.........f++A..XrYYk6+e..PB....A.....3lkUt++A...tYYk6+e...jaVV49+G.............A....................DunkUt++A.......T....P7hVV49+G..3+...........tGTD.....faVV49+G..n....P.....nuYYk6+e...5aVV49+G..f+lkUt++A............P..........D34c7x++A...AtGTD......f6AEA....v4+++O................bbVV49+G..f9lkUt++A..K....D.....TbVV49+G...EmkUt++A..fwYYk6+e.............D..........vpZYk6+e..P7hVV49+G...8mkUt++A..G.hGu7+e........b9+++O92NA......PwYYk6+e...C....A....fKmkUt++A..3xYYk6+e...xbVV49+G.............A.........fKs3wK++G..7+++++++e.bG....7hM...B....+6++9z++F.2A....uX...f.....tbVV49+G..7hA...B....XA.ffpE...ZI...nl...fB7jkUt++A...lj7D..X...fIIOA..F...fRxS..fA....PYkG.......TV4A....T....P.......PYkG....PA....A....X..kUd.....G.PYkG.......TV4A....T....P.....F.PYkG....vA.TV4A....j..kUd.....J.fyFF....vB.TV4A....v..EfQ.....TwjQDA................w8Na3++A...8YYk6+e...RvUHFF9G..T..........v8YYk6+e...9xv6K++G..fkwEfA.fA.............f.........fgmkUt++A..F.........PO.zC.9A.H..C.t.fM.LG.v0YYk6+e...XdVV49+G...lmkUt++A...5YYk6+e..faxU1ZA....3lbksV.....qIWXsE....faxU1ZA....rlbg0V.....q01ZsE................tmkUt++A..kKduu7+e.............................................f+qkUt++A...+ZYk6+e..P...........9qkUt++A............P4D36K++G...ymkUt++A..F..........DeVV49+G..Tv+79x++A..lLZIB..X..fA..........2mkUt++A..rMfuu7+e..fA..........7qkUt++A...+ZYk6+e..fA.........f8mkUt++A..B..........vuVV49+G.......................f...........UskUt++A..D4euu7+e..fZ.vwaH4o1ZB..........ngaYk6+e...VFW.F..F..fA...P.....A..........HmVV4B......Gd7x++A..................................ougGu7+e...1pVV49+G...A....bgQG.xUlb.H2buDFnVVV49+G...XRxS..fA...lj7D..X....JIOA..F.....vYW........b1E....PA.fF.A.......vYW.....E..Z.D....fA.TV4A....b..kUd........b1E....PA.fF.A....X..kUd.....G.PYkG....PB.TV4A....n..NaX.....K.PYkG.....C.P.FA....XG.........vNZYk6+e...vfVV49+G..HS2Lk0++A.............1qzHFF9G...knkUt++A..dKCuu7+e...hqQ.F..F..............B.........9fVV49+G..fA.........1Avb.PG.9A.H.HC.f.fL..EnkUt++A...EZYk6+e...PgVV49+G...VnkUt++A..tIWYqE....faxU1ZA....rlbg0V.....tIWYqE....vZxEVaA....rVaq0V................vgVV49+G..Tt389x++A.............................................1xVV49+G...prkUt++A..A..........vxVV49+G.............kSfuu7+e...DhVV49+G..fA.........vGZYk6+e..PA+y6K++G..XxnkH..fA..X..........ThVV49+G..v1.99x++A..X..........nxVV49+G...prkUt++A..X..........thVV49+G..H..........fJaYk6+e........................B..........L3VV49+G..Pj+89x++A..jm2MPX3e.............fztkUt++A..HtFAX..X..fihVV4A....D..........f....H....P.qVV49+G..................................ftqkUt++A............voA.........orkUt++A..F..........XqVV49+G..Tnu+9x++A..c....3+e...NqVV49+G...1c4zP......X13QD.....Jr.........blkUt++A...lj7D..X...fIIOA..F...fRxS..fA....v3QD.......LdDA....T..w2X.......v3QD....PA.DeiA....X..kUd.....G.PYkG.......LdDA....T..w2X.....F.PYkG....vA.TV4A....j..kUd.....J.fyFF....vB.TV4A....fqnkUt++A..fJaYk6+e.............................................fDbEhgg+A..vUZYk6+e..f2xv6K++G..f3ZDfA.fA.............f.........fAokUt++A..A.........PS.TVGF9G..fhrkUt++A..vMZYk6+e...XjVV49+G...FokUt++A...RZYk6+e..faxU1ZA....3lbksV.....qIWXsE.....vjVV49+G..z9m89x++A.............................................3jVV49+G..nbd2.gg+A...SZYk6+e..PA+y6K++G.............Jm2MPX3e...ziVV49+G...B4Dhgg+A..A.........fazEFa......DxuK..fA...VNCYD.....nE+t...F..f3ZDfA.fA..XTZYk6+e...FkVV49+G...TokUt++A..P......................................PbAL..........fbd2.gg+A..B....bE....ZkVV49+G..fVokUt++A..tUZYk6+e..PV.H.......jE.........b3ZYk6+e...ZkVV49+G...fqkUt++A..pA.GugjmZqIxwVV49+G.............mF.........b0VV49+G..fA..........4ZYk6+e..Pg996K++G..D....f++A..X3ZYk6+e...HlVV49+G..TvcloP.....2VNoB......VlVV49+G..fHmarP.....A..........gwRh...F..L..........rmKIF..X.....46E.....9iYlY1O...f+.....PMMMcOMyLy9feee6iEKVzOWOJ79XXXX7Sud8xOyqgR+DBBB7yxA2rOrGEt9Xtb47C...vOeu2a+7S+z8C...vO.....3tc67C.....A.fPE7eRiDvM..............PA......vK5h1OeVYha."
+							"blob" : "4591.CMlaKA....fQPMDZ....AzzPyIG...fi....A........................................DwrAbj.YNaD..P.....E..Tn8VYtkFdVUlbhA...........................3TY0QmbgwFHHEFarA....................................................................PSkQVZ00FHHEFarA........................................................................PA.rmLA....fYM5st++A..XVidq6+e...p0n259+G.......uPA....H..B.......B....H....PM....A....L..MUFYoUWa..............................................................................PSkQVZ00FHHEFarA.......................................................................LDagM2boMVXrA..................................................................................................................................nYidq6+e.....rmLA.....sM5st++A..Paidq6+e...31n259+G.............X...........deSXA+G...f22DVv+A...R9MgE7e.....rmLA....fwM5st++A..Xbidq6+e...z1n259+G..T..6IS.....3bidq6+e...N2n259+G..fzM5st++A.............F.........D0O5st++A..Pbidq6+e...F2n259+G.....6IS......didq6+e...f2n259+G..fyM5st++A..F.vdxD.....n2n259+G...5M5st++A..vdidq6+e.............fA.........fjidq6+e...d2n259+G...3M5st++A..E.vdxD.....52n259+G..f9M5st++A..fdidq6+e..vA.rmLA....f.N5st++A..Hfidq6+e...F3n259+G.............X.........P......g7+F.9M5st++A..neidq6+e.....rmLA.....EN5st++A..Pgidq6+e...B3n259+G..j..6IS.....vgidq6+e...b3n259+G...HN5st++A.............F.........H..........Hgidq6+e...T3n259+G..T..6IS.....3hidq6+e...t3n259+G...GN5st++A..J.vdxD.....13n259+G..fMN5st++A..niidq6+e.............fA.........TG3Sb8+e...r3n259+G..fKN5st++A..F.vdxD.....H4n259+G...RN5st++A..Xiidq6+e..vB.rmLA.....TN5st++A...kidq6+e...T4n259+G.............X..........PfdsAA....fQN5st++A..fjidq6+e..vA.rmLA....fXN5st++A..Hlidq6+e...P4n259+G..v..6IS.....nlidq6+e...p4n259+G..faN5st++A.............F..........qR5st++A...lidq6+e...h4n259+G.....6IS.....vmidq6+e...74n259+G..fZN5st++A............P.....................ac657C...........................9idq6+e...54n259+G...eN5st++A..E.vdxD.....V5n259+G..fkN5st++A..noidq6+e.............D..........A.....fv+aP......I7+FD.....PGyvAA.....75.cP......gA.GD......H+uAXoidq6+e..fA.rmLA.....rN5st++A...qidq6+e...z5n259+G.............A..........HA........fJv+aP.....b9+++C................rP5st++A...pjdq6+e...v5n259+G..b..6IS.....nridq6+e...J6n259+G..fyN5st++A............P............nWaP................w6n259+G...5N5st++A..Quib07+e.............fxN5st++A..I.vdxD.....j6n259+G...4N5st++A..ftidq6+e.............D......................fdsAA......nWaP.....Puidq6+e...76n259+G..LmDuUy++A..Ptidq6+e..fB.rmLA....f+N5st++A..3uidq6+e...B7n259+G.............A...............B....Ty...v+C.............P..........Ty..........pjdq6+e...96n259+G..r..6IS.....fwidq6+e...X7n259+G...GO5st++A............P................................3Ao259+G..vyavUy++A...3idq6+e..v++++++++AvAFO5st++A..L.vdxD.....x7n259+G..fLO5st++A..Xyidq6+e.............D..........A.....zwLbP.....ac657G.....PX.vAA......x+aP......g7+FD.....vH+uAHyidq6+e...................................zyn259+G...nhOD.ffA...p3CA.HX....K9P..BF.....5sd.......fdqG....PA.n25A.......5sd.....E.fdqG....fA.n25A....b..5sd.......fdqG....PA.n25A....X..5sd.....G.fdqG....PB.n25A....n....P.....K.fdqG.....C.j9.A.....eO5st++A..sgdA17+e..PA.........fe1cqUv+A..PCjdq6+e..............3O5st++A..+uKC17+e.............fDmoO.ffA.............f..........iO5st++A..F.........PO.zC.9A.H..XO5st++A..v4idq6+e...b9n259+G...oO5st++A..tIWYqE....faxU1ZA....rlbg0V.....tIWYqE....vZxEVaA....rVaq0V................79n259+G..HuTFXy++A.............................................9Oo259+G...7S5st++A..f+jdq6+e..P.....................dqeC17+e...P+n259+G..X..........f7idq6+e..P0vGfM++G..XCzf..PfA..F..........f+n259+G..vWNLXy++A..A..........vOo259+G...7S5st++A..F.........fT.r+UXYI..H...........+jdq6+e.............D..........B..........TUo259+G..TxRFXy++A..npjdq6+e..............EV5st++A..HwY5C.HX..P.....B.....v....bgQG.................................zM2Kvg1ak4VZ3YWYxIlbk4FYkIWYx8Bb1ImKv8Fa44RaggGbgQG....nWaP.....vZidq6+e...fJ9P..BF...nhOD.ffA...r3CA.HX.....n25A.......5sd.....E..ZqG.......n25A....T..nsd.....F.fdqG....vA.n25A.......5sd.....E..ZqG....fA.n25A....b..5sd.....I.fdqG....fB....A....r..5sd.....L.PhDD.....z.o259+G..P6vAXy++A..PCjdq6+e...A3NuV++G..fe1cqUv+A..vNjdq6+e...XBo259+G..v7tLXy++A.............dFmHA.BF..............B.........DAo259+G..fA.........1Avb.PG.9A.X.o259+G...UP5st++A..PEjdq6+e...bAo259+G..3lbksV.....tIWYqE....vZxEVaA....3lbksV.....qIWXsE....vZssVaA...............PGjdq6+e..f7RYfM++G.............................................XKkdq6+e...nRo259+G...rT5st++A..A....................3s9MXy++A..fHjdq6+e...F..........fP5st++A..UCe.17+e..fMPCB..AF..fA.........fIjdq6+e...e4vfM++G..D..........fJkdq6+e...nRo259+G..fA.........RAv9Wgkk..f...........pT5st++A............P..........H..........vfkdq6+e..PIKYfM++G..HE.B.PD...............Lao259+G..fmwIR.ffA..A....H....P.....9+G..................................ftS5st++A............voA.........oT5st++A..F..........XKo259+G..ja8BXy++A..c....3+e...NKo259+G...1UdqP......XDhOD.....Jr..........jxTP.....PMjdq6+e...z4n259+G...nhOD.ffA...p3CA.HX....K9P..BF.....5sd.......fdqG....PA....A.......5sd.....E....D....fA.n25A....b..5sd.......fdqG....PA....A....X..5sd.....G.fdqG....PB.n25A....fqP5st++A..fJkdq6+e...................................7Co259+G..P.tyq0++A..3mc2ZE7e...zFo259+G...XQ5st++A..LuKC17+e.............fmwIR.ffA.............f..........CQ5st++A..A.........PS..........3P5st++A..vQjdq6+e...bDo259+G...IQ5st++A..tIWYqE....P..........fUQ5st++A..PSjdq6+e..P5aVfM++G.............................................PSjdq6+e...n.UfM++G..bE....................zCo259+G...Kt5.Vv+A..A.....ve..fazEFa......Kgk..PfA...VDeiD.....3DVB..AF..fmwIR.ffA..XTjdq6+e...FEo259+G...TQ5st++A..P......................................PbAL..........fbT5st++A............fT....WA..............3Ujdq6+e...dEo259+G..vWQ5st++A..B....3+e...xQo259+G..fWQ5st++A..RAv9WgkkEEExQo259+G.............mF.........bUo259+G..fA..........4jdq6+e..Pt0KfM++G..D....f++A..X3jdq6+e..v++++++++++CcbnL.ffA..PXjdq6+e...tee0E.zLyL2C...3O.....HKjE5SJJJZO35QA+DBBB5ye+90OCWOp9nlll5i+98yOn7Zn9TSSS6C5cpqOEtdz9b1rY8SyLyzOurKa+7HOx8C...vOqppp93vgC8C.....A.fPE7eRiDvM..............PA......vK5h1OzKftVA"
 						}
 ,
 						"snapshotlist" : 						{
@@ -1195,7 +1267,7 @@
 										"version" : 1,
 										"isbank" : 0,
 										"isbase64" : 1,
-										"blob" : "4591.CMlaKA....fQPMDZ....AzzPyIG...fi....A........................................DwrAbj.YNaD..P.....E..Tn8VYtkFdVUlbhA...........................3TY0QmbgwFHHEFarA....................................................................PSkQVZ00FHHEFarA........................................................................PA....A....fbkkUt++A..HWYYk6+e...fUVV49+G.......uPA....H..B.......B....H....PM....A....L..MUFYoUWa..............................................................................PSkQVZ00FHHEFarA.......................................................................LDagM2boMVXrA.............................................................................vVVV49+G...skkUt++A.............F...........Hk0gg+A....RYcX3e...flTVGF9G.......P.....HbYYk6+e...BWVV49+G...rkkUt++A..E....D.....JWVV49+G..fxkkUt++A..3bYYk6+e.............fA.........vFfQUD......WVV49+G..fvkkUt++A.......D.....bWVV49+G...2kkUt++A..nbYYk6+e..fA....A.....4kkUt++A..PdYYk6+e...nWVV49+G.............X..........beVV49+G..f1kkUt++A..vcYYk6+e..PA....A....f8kkUt++A..XeYYk6+e...jWVV49+G..b....P.....3eYYk6+e...9WVV49+G..f.lkUt++A.............F....................PeYYk6+e...1WVV49+G.......P......gYYk6+e...PXVV49+G..f+kkUt++A..I....D.....XXVV49+G...FlkUt++A..vgYYk6+e.............fA.........A.....nEGQANXVV49+G...DlkUt++A..E....D.....pXVV49+G..fJlkUt++A..fgYYk6+e..fB....A....fLlkUt++A..HiYYk6+e...1XVV49+G.............X...........f6AEA.....JlkUt++A..nhYYk6+e..fA....A.....QlkUt++A..PjYYk6+e...xXVV49+G..r....P.....vjYYk6+e...LYVV49+G...TlkUt++A.............F.........fJ.GQQ.....HjYYk6+e...DYVV49+G..b....P.....3kYYk6+e...dYVV49+G...SlkUt++A..L....D.....lYVV49+G..fYlkUt++A..nlYYk6+e.............fA...........tGTD.....bYVV49+G..fWlkUt++A.......D.....3YVV49+G...dlkUt++A..XlYYk6+e.............D.....................D.........fspkUt++A.............TZVV49+G..fclkUt++A..fmYYk6+e..PA....A....fjlkUt++A..HoYYk6+e...VZVV49+G.............A.........v3e6D.......6mkUt++A..tzhGu7+e..v++++++++Avc....vK1...H....7u++6CRZVV49+G..X....P.....vpYYk6+e...rZVV49+G...rlkUt++A............P..........D.....PBbDEA....D................0lkUN.1NGEA.....nEGQQ......kvQT.qlkUt++A..G....D.....FaVV49+G..fwlkUt++A..nrYYk6+e.............D..........P....D..........X....v4+........D...........f6AEA.........f++A..XrYYk6+e..PB....A.....3lkUt++A...tYYk6+e...jaVV49+G.............A....................DunkUt++A.......T....P7hVV49+G..3+...........tGTD.....faVV49+G..n....P.....nuYYk6+e...5aVV49+G..f+lkUt++A............P..........D34c7x++A...AtGTD......f6AEA....v4+++O................bbVV49+G..f9lkUt++A..K....D.....TbVV49+G...EmkUt++A..fwYYk6+e.............D..........vpZYk6+e..P7hVV49+G...8mkUt++A..G.hGu7+e........b9+++O92NA......PwYYk6+e...C....A....fKmkUt++A..3xYYk6+e...xbVV49+G.............A.........fKs3wK++G..7+++++++e.bG....7hM...B....+6++9z++F.2A....uX...f.....tbVV49+G..7hA...B....XA.ffpE...ZI...nl...fB7jkUt++A...lj7D..X...fIIOA..F...fRxS..fA....PYkG.......TV4A....T....P.......PYkG....PA....A....X..kUd.....G.PYkG.......TV4A....T....P.....F.PYkG....vA.TV4A....j..kUd.....J.fyFF....vB.TV4A....v..EfQ.....TwjQDA................w8Na3++A...8YYk6+e...RvUHFF9G..T..........v8YYk6+e...9xv6K++G..fkwEfA.fA.............f.........fgmkUt++A..F.........PO.zC.9A.H..C.t.fM.LG.v0YYk6+e...XdVV49+G...lmkUt++A...5YYk6+e..faxU1ZA....3lbksV.....qIWXsE....faxU1ZA....rlbg0V.....q01ZsE................tmkUt++A..kKduu7+e.............................................f+qkUt++A...+ZYk6+e..P...........9qkUt++A............P4D36K++G...ymkUt++A..F..........DeVV49+G..Tv+79x++A..lLZIB..X..fA..........2mkUt++A..rMfuu7+e..fA..........7qkUt++A...+ZYk6+e..fA.........f8mkUt++A..B..........vuVV49+G.......................f...........UskUt++A..D4euu7+e..fZ.vwaH4o1ZB..........ngaYk6+e...VFW.F..F..fA...P.....A..........HmVV4B......Gd7x++A..................................ougGu7+e...1pVV49+G...A....bgQG.xUlb.H2buDFnVVV49+G...XRxS..fA...lj7D..X....JIOA..F.....vYW........b1E....PA.fF.A.......vYW.....E..Z.D....fA.TV4A....b..kUd........b1E....PA.fF.A....X..kUd.....G.PYkG....PB.TV4A....n..NaX.....K.PYkG.....C.P.FA....XG.........vNZYk6+e...vfVV49+G..HS2Lk0++A.............1qzHFF9G...knkUt++A..dKCuu7+e...hqQ.F..F..............B.........9fVV49+G..fA.........1Avb.PG.9A.H.HC.f.fL..EnkUt++A...EZYk6+e...PgVV49+G...VnkUt++A..tIWYqE....faxU1ZA....rlbg0V.....tIWYqE....vZxEVaA....rVaq0V................vgVV49+G..Tt389x++A.............................................1xVV49+G...prkUt++A..A..........vxVV49+G.............kSfuu7+e...DhVV49+G..fA.........vGZYk6+e..PA+y6K++G..XxnkH..fA..X..........ThVV49+G..v1.99x++A..X..........nxVV49+G...prkUt++A..X..........thVV49+G..H..........fJaYk6+e........................B..........L3VV49+G..Pj+89x++A..jm2MPX3e.............fztkUt++A..HtFAX..X..fihVV4A....D..........f....H....P.qVV49+G..................................ftqkUt++A............voA.........orkUt++A..F..........XqVV49+G..Tnu+9x++A..c....3+e...NqVV49+G...1c4zP......X13QD.....Jr.........blkUt++A...lj7D..X...fIIOA..F...fRxS..fA....v3QD.......LdDA....T..w2X.......v3QD....PA.DeiA....X..kUd.....G.PYkG.......LdDA....T..w2X.....F.PYkG....vA.TV4A....j..kUd.....J.fyFF....vB.TV4A....fqnkUt++A..fJaYk6+e.............................................fDbEhgg+A..vUZYk6+e..f2xv6K++G..f3ZDfA.fA.............f.........fAokUt++A..A.........PS.TVGF9G..fhrkUt++A..vMZYk6+e...XjVV49+G...FokUt++A...RZYk6+e..faxU1ZA....3lbksV.....qIWXsE.....vjVV49+G..z9m89x++A.............................................3jVV49+G..nbd2.gg+A...SZYk6+e..PA+y6K++G.............Jm2MPX3e...ziVV49+G...B4Dhgg+A..A.........fazEFa......DxuK..fA...VNCYD.....nE+t...F..f3ZDfA.fA..XTZYk6+e...FkVV49+G...TokUt++A..P......................................PbAL..........fbd2.gg+A..B....bE....ZkVV49+G..fVokUt++A..tUZYk6+e..PV.H.......jE.........b3ZYk6+e...ZkVV49+G...fqkUt++A..pA.GugjmZqIxwVV49+G.............mF.........b0VV49+G..fA..........4ZYk6+e..Pg996K++G..D....f++A..X3ZYk6+e...HlVV49+G..TvcloP.....2VNoB......VlVV49+G..fHmarP.....A..........gwRh...F..L..........rmKIF..X.....46E.....9iYlY1O...f+.....PMMMcOMyLy9feee6iEKVzOWOJ79XXXX7Sud8xOyqgR+DBBB7yxA2rOrGEt9Xtb47C...vOeu2a+7S+z8C...vO.....3tc67C.....A.fPE7eRiDvM..............PA......vK5h1OeVYha."
+										"blob" : "4591.CMlaKA....fQPMDZ....AzzPyIG...fi....A........................................DwrAbj.YNaD..P.....E..Tn8VYtkFdVUlbhA...........................3TY0QmbgwFHHEFarA....................................................................PSkQVZ00FHHEFarA........................................................................PA.rmLA....fYM5st++A..XVidq6+e...p0n259+G.......uPA....H..B.......B....H....PM....A....L..MUFYoUWa..............................................................................PSkQVZ00FHHEFarA.......................................................................LDagM2boMVXrA..................................................................................................................................nYidq6+e.....rmLA.....sM5st++A..Paidq6+e...31n259+G.............X...........deSXA+G...f22DVv+A...R9MgE7e.....rmLA....fwM5st++A..Xbidq6+e...z1n259+G..T..6IS.....3bidq6+e...N2n259+G..fzM5st++A.............F.........D0O5st++A..Pbidq6+e...F2n259+G.....6IS......didq6+e...f2n259+G..fyM5st++A..F.vdxD.....n2n259+G...5M5st++A..vdidq6+e.............fA.........fjidq6+e...d2n259+G...3M5st++A..E.vdxD.....52n259+G..f9M5st++A..fdidq6+e..vA.rmLA....f.N5st++A..Hfidq6+e...F3n259+G.............X.........P......g7+F.9M5st++A..neidq6+e.....rmLA.....EN5st++A..Pgidq6+e...B3n259+G..j..6IS.....vgidq6+e...b3n259+G...HN5st++A.............F.........H..........Hgidq6+e...T3n259+G..T..6IS.....3hidq6+e...t3n259+G...GN5st++A..J.vdxD.....13n259+G..fMN5st++A..niidq6+e.............fA.........TG3Sb8+e...r3n259+G..fKN5st++A..F.vdxD.....H4n259+G...RN5st++A..Xiidq6+e..vB.rmLA.....TN5st++A...kidq6+e...T4n259+G.............X..........PfdsAA....fQN5st++A..fjidq6+e..vA.rmLA....fXN5st++A..Hlidq6+e...P4n259+G..v..6IS.....nlidq6+e...p4n259+G..faN5st++A.............F..........qR5st++A...lidq6+e...h4n259+G.....6IS.....vmidq6+e...74n259+G..fZN5st++A............P.....................ac657C...........................9idq6+e...54n259+G...eN5st++A..E.vdxD.....V5n259+G..fkN5st++A..noidq6+e.............D..........A.....fv+aP......I7+FD.....PGyvAA.....75.cP......gA.GD......H+uAXoidq6+e..fA.rmLA.....rN5st++A...qidq6+e...z5n259+G.............A..........HA........fJv+aP.....b9+++C................rP5st++A...pjdq6+e...v5n259+G..b..6IS.....nridq6+e...J6n259+G..fyN5st++A............P............nWaP................w6n259+G...5N5st++A..Quib07+e.............fxN5st++A..I.vdxD.....j6n259+G...4N5st++A..ftidq6+e.............D......................fdsAA......nWaP.....Puidq6+e...76n259+G..LmDuUy++A..Ptidq6+e..fB.rmLA....f+N5st++A..3uidq6+e...B7n259+G.............A...............B....Ty...v+C.............P..........Ty..........pjdq6+e...96n259+G..r..6IS.....fwidq6+e...X7n259+G...GO5st++A............P................................3Ao259+G..vyavUy++A...3idq6+e..v++++++++AvAFO5st++A..L.vdxD.....x7n259+G..fLO5st++A..Xyidq6+e.............D..........A.....zwLbP.....ac657G.....PX.vAA......x+aP......g7+FD.....vH+uAHyidq6+e...................................zyn259+G...nhOD.ffA...p3CA.HX....K9P..BF.....5sd.......fdqG....PA.n25A.......5sd.....E.fdqG....fA.n25A....b..5sd.......fdqG....PA.n25A....X..5sd.....G.fdqG....PB.n25A....n....P.....K.fdqG.....C.j9.A.....eO5st++A..sgdA17+e..PA.........fe1cqUv+A..PCjdq6+e..............3O5st++A..+uKC17+e.............fDmoO.ffA.............f..........iO5st++A..F.........PO.zC.9A.H..XO5st++A..v4idq6+e...b9n259+G...oO5st++A..tIWYqE....faxU1ZA....rlbg0V.....tIWYqE....vZxEVaA....rVaq0V................79n259+G..HuTFXy++A.............................................9Oo259+G...7S5st++A..f+jdq6+e..P.....................dqeC17+e...P+n259+G..X..........f7idq6+e..P0vGfM++G..XCzf..PfA..F..........f+n259+G..vWNLXy++A..A..........vOo259+G...7S5st++A..F.........fT.r+UXYI..H...........+jdq6+e.............D..........B..........TUo259+G..TxRFXy++A..npjdq6+e..............EV5st++A..HwY5C.HX..P.....B.....v....bgQG.................................zM2Kvg1ak4VZ3YWYxIlbk4FYkIWYx8Bb1ImKv8Fa44RaggGbgQG....nWaP.....vZidq6+e...fJ9P..BF...nhOD.ffA...r3CA.HX.....n25A.......5sd.....E..ZqG.......n25A....T..nsd.....F.fdqG....vA.n25A.......5sd.....E..ZqG....fA.n25A....b..5sd.....I.fdqG....fB....A....r..5sd.....L.PhDD.....z.o259+G..P6vAXy++A..PCjdq6+e...A3NuV++G..fe1cqUv+A..vNjdq6+e...XBo259+G..v7tLXy++A.............dFmHA.BF..............B.........DAo259+G..fA.........1Avb.PG.9A.X.o259+G...UP5st++A..PEjdq6+e...bAo259+G..3lbksV.....tIWYqE....vZxEVaA....3lbksV.....qIWXsE....vZssVaA...............PGjdq6+e..f7RYfM++G.............................................XKkdq6+e...nRo259+G...rT5st++A..A....................3s9MXy++A..fHjdq6+e...F..........fP5st++A..UCe.17+e..fMPCB..AF..fA.........fIjdq6+e...e4vfM++G..D..........fJkdq6+e...nRo259+G..fA.........RAv9Wgkk..f...........pT5st++A............P..........H..........vfkdq6+e..PIKYfM++G..HE.B.PD...............Lao259+G..fmwIR.ffA..A....H....P.....9+G..................................ftS5st++A............voA.........oT5st++A..F..........XKo259+G..ja8BXy++A..c....3+e...NKo259+G...1UdqP......XDhOD.....Jr..........jxTP.....PMjdq6+e...z4n259+G...nhOD.ffA...p3CA.HX....K9P..BF.....5sd.......fdqG....PA....A.......5sd.....E....D....fA.n25A....b..5sd.......fdqG....PA....A....X..5sd.....G.fdqG....PB.n25A....fqP5st++A..fJkdq6+e...................................7Co259+G..P.tyq0++A..3mc2ZE7e...zFo259+G...XQ5st++A..LuKC17+e.............fmwIR.ffA.............f..........CQ5st++A..A.........PS..........3P5st++A..vQjdq6+e...bDo259+G...IQ5st++A..tIWYqE....P..........fUQ5st++A..PSjdq6+e..P5aVfM++G.............................................PSjdq6+e...n.UfM++G..bE....................zCo259+G...Kt5.Vv+A..A.....ve..fazEFa......Kgk..PfA...VDeiD.....3DVB..AF..fmwIR.ffA..XTjdq6+e...FEo259+G...TQ5st++A..P......................................PbAL..........fbT5st++A............fT....WA..............3Ujdq6+e...dEo259+G..vWQ5st++A..B....3+e...xQo259+G..fWQ5st++A..RAv9WgkkEEExQo259+G.............mF.........bUo259+G..fA..........4jdq6+e..Pt0KfM++G..D....f++A..X3jdq6+e..v++++++++++CcbnL.ffA..PXjdq6+e...tee0E.zLyL2C...3O.....HKjE5SJJJZO35QA+DBBB5ye+90OCWOp9nlll5i+98yOn7Zn9TSSS6C5cpqOEtdz9b1rY8SyLyzOurKa+7HOx8C...vOqppp93vgC8C.....A.fPE7eRiDvM..............PA......vK5h1OzKftVA"
 									}
 ,
 									"fileref" : 									{
@@ -1203,25 +1275,7 @@
 										"filename" : "PhoenixVerb.maxsnap",
 										"filepath" : "~/Documents/Max 8/Snapshots",
 										"filepos" : -1,
-										"snapshotfileid" : "0e08e7c4f001b1b4d7d8bf7761cfc52b"
-									}
-
-								}
-, 								{
-									"filetype" : "C74Snapshot",
-									"version" : 2,
-									"minorversion" : 0,
-									"name" : "PhoenixVerb",
-									"origin" : "PhoenixVerb.vst",
-									"type" : "VST",
-									"subtype" : "AudioEffect",
-									"embed" : 0,
-									"fileref" : 									{
-										"name" : "PhoenixVerb",
-										"filename" : "PhoenixVerb.maxsnap",
-										"filepath" : "~/Documents/Max 8/Snapshots",
-										"filepos" : -1,
-										"snapshotfileid" : "0e08e7c4f001b1b4d7d8bf7761cfc52b"
+										"snapshotfileid" : "377b581279092e7ddfac1f8bb17ec0fc"
 									}
 
 								}
@@ -1243,7 +1297,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 771.5, 654.0, 39.0, 22.0 ],
+					"patching_rect" : [ 771.5, 813.0, 39.0, 22.0 ],
 					"text" : "dbtoa"
 				}
 
@@ -1255,7 +1309,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 718.0, 649.0, 29.5, 22.0 ],
+					"patching_rect" : [ 718.0, 808.0, 29.5, 22.0 ],
 					"text" : "*~"
 				}
 
@@ -1267,13 +1321,13 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "bang" ],
-					"patching_rect" : [ 824.5, 510.0, 47.0, 22.0 ],
+					"patching_rect" : [ 824.5, 669.0, 47.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"basictuning" : 440,
 						"followglobaltempo" : 0,
 						"formantcorrection" : 0,
 						"mode" : "basic",
-						"originallength" : [ 3604.979999999995016, "ticks" ],
+						"originallength" : [ 2500.799999999996544, "ticks" ],
 						"originaltempo" : 119.999999999999829,
 						"pitchcorrection" : 0,
 						"quality" : "basic",
@@ -1291,7 +1345,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 718.0, 589.0, 125.5, 22.0 ],
+					"patching_rect" : [ 718.0, 748.0, 125.5, 22.0 ],
 					"text" : "selector~ 2"
 				}
 
@@ -1303,7 +1357,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "int", "", "int", "float" ],
-					"patching_rect" : [ 83.0, 268.0, 62.0, 22.0 ],
+					"patching_rect" : [ 83.0, 427.0, 62.0, 22.0 ],
 					"text" : "t 2 l 1 -98."
 				}
 
@@ -1315,7 +1369,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 771.5, 553.0, 44.0, 22.0 ],
+					"patching_rect" : [ 771.5, 712.0, 44.0, 22.0 ],
 					"text" : "noise~"
 				}
 
@@ -1327,7 +1381,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 480.0, 100.0, 70.0, 22.0 ],
+					"patching_rect" : [ 480.0, 259.0, 70.0, 22.0 ],
 					"text" : "loadmess 1"
 				}
 
@@ -1340,7 +1394,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 480.0, 139.0, 50.0, 22.0 ],
+					"patching_rect" : [ 480.0, 298.0, 50.0, 22.0 ],
 					"varname" : "stateIndex"
 				}
 
@@ -1352,7 +1406,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 621.0, 100.0, 150.0, 87.0 ],
+					"patching_rect" : [ 621.0, 259.0, 150.0, 87.0 ],
 					"text" : "States:\n1: Ready\n2: Param Set Noise\n3. Param Set Tail\n4: Render\n5: Render Tail"
 				}
 
@@ -1364,7 +1418,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 5,
 					"outlettype" : [ "", "", "", "", "" ],
-					"patching_rect" : [ 83.0, 234.0, 200.0, 22.0 ],
+					"patching_rect" : [ 83.0, 393.0, 200.0, 22.0 ],
 					"text" : "gate 5"
 				}
 
@@ -1376,7 +1430,7 @@
 					"numinlets" : 5,
 					"numoutlets" : 5,
 					"outlettype" : [ "", "", "", "", "" ],
-					"patching_rect" : [ 75.0, 61.0, 397.0, 22.0 ],
+					"patching_rect" : [ 75.0, 73.0, 397.0, 22.0 ],
 					"text" : "route read write param render"
 				}
 
@@ -1404,7 +1458,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 962.0, 559.0, 58.0, 22.0 ],
+					"patching_rect" : [ 962.0, 718.0, 58.0, 22.0 ],
 					"text" : "signal $1"
 				}
 
@@ -1519,6 +1573,20 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-22", 0 ],
+					"source" : [ "obj-12", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-22", 1 ],
+					"source" : [ "obj-12", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-7", 0 ],
 					"order" : 2,
 					"source" : [ "obj-120", 0 ]
@@ -1539,7 +1607,7 @@
 					"order" : 1,
 					"source" : [ "obj-120", 0 ],
 					"watchpoint_flags" : 2,
-					"watchpoint_id" : 77
+					"watchpoint_id" : 25
 				}
 
 			}
@@ -1608,7 +1676,7 @@
 					"order" : 1,
 					"source" : [ "obj-124", 2 ],
 					"watchpoint_flags" : 2,
-					"watchpoint_id" : 78
+					"watchpoint_id" : 26
 				}
 
 			}
@@ -1668,16 +1736,23 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-91", 0 ],
-					"midpoints" : [ 253.0, 768.0, 233.0, 768.0, 233.0, 588.0, 321.0, 588.0 ],
-					"source" : [ "obj-143", 0 ]
+					"destination" : [ "obj-23", 0 ],
+					"source" : [ "obj-14", 1 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-1", 0 ],
-					"source" : [ "obj-15", 0 ]
+					"destination" : [ "obj-23", 1 ],
+					"source" : [ "obj-14", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-91", 0 ],
+					"midpoints" : [ 253.0, 927.0, 233.0, 927.0, 233.0, 747.0, 321.0, 747.0 ],
+					"source" : [ "obj-143", 0 ]
 				}
 
 			}
@@ -1690,22 +1765,29 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-18", 1 ],
-					"source" : [ "obj-15", 2 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-2", 0 ],
+					"destination" : [ "obj-12", 0 ],
 					"source" : [ "obj-15", 1 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-14", 0 ],
+					"source" : [ "obj-15", 2 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-4", 0 ],
+					"source" : [ "obj-15", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-18", 0 ],
-					"midpoints" : [ 39.5, 396.0, 20.0, 396.0, 20.0, 223.0, 92.5, 223.0 ],
+					"midpoints" : [ 39.5, 555.0, 20.0, 555.0, 20.0, 382.0, 92.5, 382.0 ],
 					"source" : [ "obj-171", 0 ]
 				}
 
@@ -1798,7 +1880,7 @@
 					"destination" : [ "obj-71", 0 ],
 					"source" : [ "obj-187", 0 ],
 					"watchpoint_flags" : 2,
-					"watchpoint_id" : 79
+					"watchpoint_id" : 27
 				}
 
 			}
@@ -1814,7 +1896,7 @@
 					"destination" : [ "obj-87", 0 ],
 					"source" : [ "obj-190", 0 ],
 					"watchpoint_flags" : 2,
-					"watchpoint_id" : 80
+					"watchpoint_id" : 28
 				}
 
 			}
@@ -1878,8 +1960,65 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-1", 0 ],
+					"source" : [ "obj-21", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-15", 0 ],
+					"midpoints" : [ 84.5, 191.0, 66.5, 191.0, 66.5, 62.0, 84.5, 62.0 ],
+					"source" : [ "obj-21", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-15", 0 ],
+					"source" : [ "obj-22", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"source" : [ "obj-22", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-15", 0 ],
+					"source" : [ "obj-23", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-18", 1 ],
+					"source" : [ "obj-23", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-71", 0 ],
 					"source" : [ "obj-3", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-21", 0 ],
+					"source" : [ "obj-4", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-21", 1 ],
+					"source" : [ "obj-4", 0 ]
 				}
 
 			}

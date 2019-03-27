@@ -199,16 +199,21 @@ const doWork = async (index, work) => {
         fs.mkdirSync(runOutDir);
     }
 
-    maxApi.outlet("target", index);
-    maxApi.outlet("read", filePath);
-    maxApi.outlet("write", `${runOutDir}/${crypto.createHash('md5').update(fileName).digest("hex")}.wav`);
+    let renderMsg = [
+        "targetmsg", index,
+        "read", filePath,
+        "write", `${runOutDir}/${crypto.createHash('md5').update(fileName).digest("hex")}.wav`,
+    ];
     for (var k in workItem.params) {
-        maxApi.outlet("param", paramNameMappings[k], workItem.params[k]);
+        renderMsg.push("param");
+        renderMsg.push(paramNameMappings[k]);
+        renderMsg.push(workItem.params[k]);
     }
-    maxApi.outlet("render");
+    renderMsg.push("render");
+    await maxApi.outlet(renderMsg);
 };
 
-const tryWork = () => {
+const tryWork = async () => {
     const findAvailableInstance = () => {
         return availableInstances.findIndex((value) => { return value; });
     };
@@ -245,7 +250,7 @@ const maxHandlers = {
             fs.mkdirSync(defaultOutputDir);
         }
     },
-    [maxApi.MESSAGE_TYPES.NUMBER]: (instance) => {
+    [maxApi.MESSAGE_TYPES.NUMBER]: async (instance) => {
         availableInstances[instance] = true;
         tryWork();
     }
