@@ -422,7 +422,8 @@ const submitHandler = async (req, res) => {
 };
 
 const statusHandler = (req, res) => {
-    if (workQueue.length == 0) {
+    const currentlyProcessing = availableInstances.filter((x) => { return !x; }).length;
+    if (workQueue.length == 0 && currentlyProcessing == 0) {
         res.status(ResponseCode.NoJobs).json({
             status: ResponseCode.NoJobs,
             message: "All jobs complete"
@@ -432,7 +433,7 @@ const statusHandler = (req, res) => {
         const soundFiles = job.input_files === undefined ? defaultSoundFiles : job.input_files;
         res.status(ResponseCode.RunningJobs).json({
             status: ResponseCode.RunningJobs,
-            message: `Rendering file ${workQueue[0].fileIndex+1} of ${soundFiles.length} (job 1 of ${workQueue.length})`
+            message: `Rendering file ${workQueue[0].fileIndex} of ${soundFiles.length} (job 1 of ${workQueue.length}). Currently Processing ${currentlyProcessing} files.`
         });
     }
 };
@@ -452,7 +453,7 @@ const jobStatusHandler = (req, res) => {
     }
     res.status(ResponseCode.NoJobs).json({
         status: ResponseCode.NoJobs,
-        message: "Job done (or never queued)",
+        message: "All files in job either rendered or currently rendered (or job was never queued)",
         details: job.run_id
     });
 };
