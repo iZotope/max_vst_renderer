@@ -430,10 +430,11 @@ const statusHandler = (req, res) => {
         });
     } else {
         const job = workQueue[0];
-        const soundFiles = job.input_files === undefined ? defaultSoundFiles : job.input_files;
+        const soundFiles = job === undefined ? defaultSoundFiles : job.input_files;
+        const fileIndex = job === undefined ? 0 : job.fileIndex;
         res.status(ResponseCode.RunningJobs).json({
             status: ResponseCode.RunningJobs,
-            message: `Rendering file ${workQueue[0].fileIndex} of ${soundFiles.length} (job 1 of ${workQueue.length}). Currently Processing ${currentlyProcessing} files.`
+            message: `Rendering file ${fileIndex} of ${soundFiles.length} (queue length ${workQueue.length}). Currently Processing ${currentlyProcessing} files.`
         });
     }
 };
@@ -447,7 +448,7 @@ const jobStatusHandler = (req, res) => {
         if (job.fileIndex < soundFiles.length) {
             res.status(ResponseCode.RunningJobs).json({
                 status: ResponseCode.RunningJobs,
-                message: `Processed ${job.fileIndex} of ${soundFiles.length} (job 1 of ${workQueue.length})`
+                message: `Processed ${job.fileIndex} of ${soundFiles.length} (queue length ${workQueue.length}).`
             });
         }
     }
