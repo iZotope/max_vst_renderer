@@ -1,5 +1,7 @@
-###Node###
+*.vst
+*~
 
+###Node###
 # Logs
 logs
 *.log
