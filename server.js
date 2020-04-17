@@ -61,6 +61,7 @@ const ResponseCode = {
     NoJobs: 204
 };
 
+// Use this dictionary to customize mappings of HTTP request parameters to VST plug-in parameters
 const paramNameMappings = {
     Mix: "Mix",
     Diffusion: "Diffusion",
