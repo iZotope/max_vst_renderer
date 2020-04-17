@@ -18,14 +18,14 @@ Open _vst\_renderer.maxpat_.
 If you require mappings from parameter names in HTTP requests to VST plugin parameter names, edit
 _server.js_ and modify the `paramNameMappings` object.
 
-To customize the VST plug-in being used, edit _pvr.poly.maxpat_ and change the argument to the
+To customize the VST plug-in being used, edit _pvr.poly.maxpat_ and change the third argument to the
 `vst~` object from "PhoenixVerb.vst" to the name of our your desired plug-in. 
 
 ## License and Attribution
 
 Copyright (c) 2019 iZotope, Inc.  All rights reserved.
 
-See LICENSE.md for copying information.
+See [LICENSE.md](LICENSE.md) for copying information.
 
 Please cite the following paper when using this code for your project:
 
